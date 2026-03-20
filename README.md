@@ -3,7 +3,7 @@
 **Código da Disciplina**: IBM8936<br>
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+Tema do Projeto: Gestão de Estágio
 
 ## Instalação 
 **Linguagens**: Python, Django<br>
