@@ -4,7 +4,12 @@
 
 ## Sobre 
 Tema: Gestão de Estágio
-
+- Gabriel Barreto
+- Guilherme Braz
+- Ísis Tavares
+- Mariana Faria
+- Matheus Avarenga
+  
 ## Instalação 
 **Linguagens**: Python, Django<br>
 **Tecnologias**: Github, Visual Studio Code<br>
