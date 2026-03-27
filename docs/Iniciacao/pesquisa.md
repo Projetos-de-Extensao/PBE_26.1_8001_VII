@@ -18,9 +18,15 @@ O público-alvo inclui estudantes em fase inicial de estágio, instituições de
 O projeto abrange a análise da legislação vigente, das diretrizes do MEC e das práticas de gestão de estágio na fase de iniciação. Não inclui o desenvolvimento de sistemas ou soluções tecnológicas, sendo restrito à pesquisa e análise teórica.
 
 ## 5. Análise de Aplicações e Mercado
-Atualmente, existem diversas ferramentas que auxiliam na gestão de estágios, como sistemas acadêmicos institucionais e plataformas digitais de acompanhamento. Essas soluções permitem o controle de horas, envio de relatórios, registro de atividades e comunicação entre estagiário, instituição e empresa.
+Atualmente, diversas instituições de ensino utilizam sistemas próprios ou plataformas digitais para gerenciar estágios, com foco principalmente no controle de documentos, carga horária e validação acadêmica.
 
-No mercado, observa-se uma tendência de digitalização desses processos, com foco na automação, integração de dados e melhoria na gestão das informações.
+Exemplos reais incluem sistemas acadêmicos como o SIA (IBMEC), o SIGAA (utilizado por universidades federais) e portais de estágio de instituições como PUC Minas e Anhanguera. Essas plataformas permitem o cadastro do estágio, envio de documentos como termo de compromisso, registro de atividades, acompanhamento por orientadores e validação final do estágio.
+
+Além disso, algumas instituições utilizam ferramentas complementares como Google Classroom ou Moodle para envio de relatórios e comunicação entre aluno e professor orientador.
+
+No mercado, também existem organizações como CIEE e Nube, que atuam na intermediação de estágios e oferecem suporte na gestão administrativa, incluindo controle de contratos e acompanhamento básico das atividades.
+
+Apesar dessas soluções, a maioria dos sistemas é focada em processos burocráticos, com pouca automação inteligente. Observa-se uma oportunidade de melhoria na integração entre sistemas, análise automatizada de desempenho e validação mais eficiente dos relatórios de estágio.
 
 ## 6. Levantamento de Legislação
 
@@ -64,17 +70,27 @@ Além disso, o cumprimento das exigências de estágio é condição para a conc
 Dessa forma, o IBMEC atua diretamente na gestão do estágio, garantindo controle, acompanhamento e validação das atividades realizadas.
 
 ## 7. Validação de Relatório Automática
-A validação de relatórios de estágio é uma etapa fundamental na gestão do processo, pois permite verificar se as atividades desenvolvidas estão alinhadas com os objetivos acadêmicos.
+A validação de relatórios de estágio é uma etapa essencial na gestão do processo, pois garante que as atividades realizadas pelo estagiário estejam alinhadas com os objetivos acadêmicos e com o plano de atividades definido.
 
-Atualmente, esse processo costuma ser feito de forma manual por supervisores e instituições, o que pode gerar atrasos e inconsistências.
+Atualmente, essa validação é feita majoritariamente de forma manual por professores orientadores ou coordenadores, por meio da leitura dos relatórios e verificação das horas cumpridas. Esse processo pode ser demorado, sujeito a erros e pouco padronizado.
 
-Uma possível melhoria é a implementação de sistemas automatizados capazes de:
-- verificar preenchimento correto dos relatórios  
-- validar carga horária automaticamente  
-- analisar coerência entre atividades e área do curso  
-- gerar feedbacks iniciais para o aluno  
+Alguns sistemas acadêmicos já realizam validações básicas, como:
 
-Essas soluções aumentam a eficiência da gestão de estágio, reduzem erros e melhoram o acompanhamento do desempenho do estagiário.
+verificação de preenchimento de campos obrigatórios
+controle automático da carga horária
+bloqueio de envio fora do prazo
+
+No entanto, ainda há limitações na análise qualitativa dos relatórios.
+
+Uma evolução nesse processo seria a adoção de validação automatizada mais avançada, com funcionalidades como:
+
+análise de coerência entre atividades descritas e área do curso
+identificação de inconsistências ou informações incompletas
+verificação automática do cumprimento do plano de atividades
+geração de feedback preliminar para o estudante
+apoio à decisão do professor orientador
+
+Essa abordagem poderia utilizar técnicas de processamento de texto e análise de dados para auxiliar na avaliação, tornando o processo mais rápido, padronizado e eficiente, sem substituir a análise final humana.
 
 ## 8. Stakeholder: Pró-Reitoria Acadêmica
 A Pró-Reitoria Acadêmica é responsável por definir diretrizes institucionais, garantir o cumprimento das normas e supervisionar as atividades de estágio, assegurando qualidade e alinhamento com os objetivos pedagógicos.
