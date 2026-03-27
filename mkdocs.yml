@@ -98,9 +98,9 @@ plugins:
   - search
 
 theme:
-  favicon: assets/ibmec_icon.png
+  favicon: docs/assets/ibmec_icon.png
   name: material
-  logo: assets/ibmec_logo.png
+  logo: docs/assets/ibmec_logo.png
   palette:
     
     - media: "(prefers-color-scheme)"
