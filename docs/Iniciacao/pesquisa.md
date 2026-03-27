@@ -20,7 +20,7 @@ O projeto abrange a análise da legislação vigente, das diretrizes do MEC e da
 ## 5. Análise de Aplicações e Mercado
 Atualmente, existem diversas ferramentas que auxiliam na gestão de estágios, como sistemas acadêmicos institucionais e plataformas digitais de acompanhamento. Essas soluções permitem o controle de horas, envio de relatórios, registro de atividades e comunicação entre estagiário, instituição e empresa.
 
-No mercado, observa-se uma tendência de digitalização desses processos, com foco na automação, integração de dados e melhoria na gestão das informações. Ferramentas como sistemas internos das universidades e plataformas de gestão de tarefas contribuem para maior eficiência no acompanhamento do estágio.
+No mercado, observa-se uma tendência de digitalização desses processos, com foco na automação, integração de dados e melhoria na gestão das informações.
 
 ## 6. Levantamento de Legislação
 
@@ -29,33 +29,55 @@ O principal marco legal que rege os estágios no Brasil é a Lei nº 11.788/2008
 
 Definição: O estágio é um ato educativo escolar supervisionado, desenvolvido no ambiente de trabalho, com o objetivo de preparar o estudante para o trabalho produtivo.
 
-Tipos: O estágio pode ser obrigatório ou não obrigatório. O estágio obrigatório é aquele definido no projeto pedagógico do curso, sendo requisito para aprovação e obtenção do diploma. Já o estágio não obrigatório é uma atividade opcional, acrescida à carga horária regular do curso.
+Tipos: O estágio pode ser obrigatório ou não obrigatório.
 
-Jornada: A carga horária do estágio deve ser de até 4 horas diárias e 20 semanais, ou até 6 horas diárias e 30 semanais, dependendo do nível de ensino e do acordo firmado.
+Jornada: A carga horária do estágio deve ser de até 4 ou 6 horas diárias, conforme acordado.
 
-Direitos: O estagiário tem direito a recesso de 30 dias a cada 12 meses de estágio, preferencialmente durante as férias escolares. No caso de estágio não obrigatório, é obrigatória a concessão de bolsa auxílio e auxílio-transporte.
+Direitos: O estagiário tem direito a recesso e, no caso de estágio não obrigatório, bolsa auxílio e auxílio-transporte.
 
-Vínculo empregatício: O descumprimento das exigências da lei pode caracterizar vínculo empregatício entre o estagiário e a parte concedente, sujeitando a empresa às normas da legislação trabalhista e previdenciária.
+Vínculo empregatício: O descumprimento da lei pode gerar vínculo empregatício.
 
-Segurança: Aplica-se ao estagiário a legislação relacionada à saúde e segurança no trabalho, sendo sua implementação responsabilidade da parte concedente.
+Segurança: Aplica-se a legislação de saúde e segurança no trabalho.
 
 ### 6.2 Regulamentação do MEC
-O Ministério da Educação (MEC), por meio do Conselho Nacional de Educação (CNE), estabelece as Diretrizes Curriculares Nacionais (DCNs), que orientam a organização e a obrigatoriedade dos estágios nos cursos superiores.
+O MEC estabelece diretrizes por meio das DCNs, que orientam a obrigatoriedade e estrutura dos estágios nos cursos superiores.
 
-Bacharelados: Nos cursos de bacharelado presenciais, a carga horária destinada ao estágio e às atividades complementares geralmente não deve ultrapassar 20% da carga horária total do curso, salvo exceções previstas em legislação específica.
+Bacharelados: Até cerca de 20% da carga horária total.
 
-Licenciaturas: Nos cursos de licenciatura, são exigidas, no mínimo, 400 horas de estágio curricular supervisionado, normalmente iniciadas na segunda metade do curso.
+Licenciaturas: Mínimo de 400 horas.
 
-Jornada máxima: A jornada do estágio deve ser definida em comum acordo entre a instituição de ensino, a parte concedente e o estagiário, devendo constar no termo de compromisso e ser compatível com as atividades acadêmicas, respeitando o limite de até 6 horas diárias e 30 semanais.
+Jornada máxima: Até 6 horas diárias e 30 semanais.
 
-Responsabilidade institucional: Cabe às instituições de ensino regulamentar e normatizar o estágio supervisionado, conforme o projeto pedagógico do curso.
+Responsabilidade institucional: Cabe às instituições regulamentar os estágios.
 
-Cursos tecnológicos: A obrigatoriedade do estágio nos cursos de educação profissional tecnológica depende das diretrizes específicas de cada curso e da legislação vigente.
+### 6.3 Regulamento IBMEC
+O regulamento de estágio do IBMEC complementa a legislação nacional, definindo regras específicas para os alunos da instituição.
 
-Relação com a gestão de estágio: A legislação e as diretrizes do MEC são fundamentais para a gestão de estágio, pois orientam a organização, o acompanhamento e a avaliação das atividades, garantindo que o estágio cumpra sua função educativa.
+O estágio só é válido quando o aluno está regularmente matriculado e com documentação formalizada, como termo de compromisso e convênio entre as partes. :contentReference[oaicite:0]{index=0}  
 
-## 7. Stakeholder: Pró-Reitoria Acadêmica
-A Pró-Reitoria Acadêmica é um dos principais stakeholders no processo de gestão de estágio. Ela é responsável por definir diretrizes institucionais, garantir o cumprimento das normas do MEC e da legislação vigente, além de supervisionar e apoiar a execução dos estágios nos cursos. Sua atuação é essencial para assegurar a qualidade das atividades e o alinhamento com os objetivos pedagógicos.
+A não entrega de documentos obrigatórios pode caracterizar o estágio como irregular, impedindo sua validação acadêmica. :contentReference[oaicite:1]{index=1}  
+
+O regulamento também estabelece a necessidade de acompanhamento por um supervisor, além da elaboração de plano de atividades, avaliação parcial e relatório final de estágio. :contentReference[oaicite:2]{index=2}  
+
+Além disso, o cumprimento das exigências de estágio é condição para a conclusão do curso e participação na colação de grau. :contentReference[oaicite:3]{index=3}  
+
+Dessa forma, o IBMEC atua diretamente na gestão do estágio, garantindo controle, acompanhamento e validação das atividades realizadas.
+
+## 7. Validação de Relatório Automática
+A validação de relatórios de estágio é uma etapa fundamental na gestão do processo, pois permite verificar se as atividades desenvolvidas estão alinhadas com os objetivos acadêmicos.
+
+Atualmente, esse processo costuma ser feito de forma manual por supervisores e instituições, o que pode gerar atrasos e inconsistências.
+
+Uma possível melhoria é a implementação de sistemas automatizados capazes de:
+- verificar preenchimento correto dos relatórios  
+- validar carga horária automaticamente  
+- analisar coerência entre atividades e área do curso  
+- gerar feedbacks iniciais para o aluno  
+
+Essas soluções aumentam a eficiência da gestão de estágio, reduzem erros e melhoram o acompanhamento do desempenho do estagiário.
+
+## 8. Stakeholder: Pró-Reitoria Acadêmica
+A Pró-Reitoria Acadêmica é responsável por definir diretrizes institucionais, garantir o cumprimento das normas e supervisionar as atividades de estágio, assegurando qualidade e alinhamento com os objetivos pedagógicos.
 
 Pesquisa realizada para compreensão das principais características do Aplicativo de **Streaming**.
 
