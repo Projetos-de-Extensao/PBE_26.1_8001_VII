@@ -12,8 +12,13 @@ hide:
 
     ---
 
-    Grupo VII da aula de Projeto Back-End
-    Membros: Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria e Matheus Avarenga.
+    Grupo VII da aula de Projeto Back-End de Sexta-feira de Manhã.
+
+    - Gabriel Barreto 
+    - Guilherme Braz
+    - Ísis Tavares
+    - Mariana Faria
+    - Matheus Avarenga
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_26.1_8001_VII)
 
