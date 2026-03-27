@@ -40,7 +40,7 @@ Exemplos reais incluem sistemas acadêmicos como o SIA (IBMEC), o SIGAA (utiliza
 
 Além disso, algumas instituições utilizam ferramentas complementares como Google Classroom ou Moodle para envio de relatórios e comunicação entre aluno e professor orientador.
 
-No mercado, também existem organizações como CIEE e Nube, que atuam na intermediação de estágios e oferecem suporte na gestão administrativa, incluindo controle de contratos e acompanhamento básico das atividades.
+No mercado, também existem organizações como Zuna, CIEE e Nube, que atuam na intermediação de estágios e oferecem suporte na gestão administrativa, incluindo controle de contratos e acompanhamento básico das atividades.
 
 Apesar dessas soluções, a maioria dos sistemas é focada em processos burocráticos, com pouca automação inteligente. Observa-se uma oportunidade de melhoria na integração entre sistemas, análise automatizada de desempenho e validação mais eficiente dos relatórios de estágio.
 
