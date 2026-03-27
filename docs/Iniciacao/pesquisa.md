@@ -28,46 +28,53 @@ No mercado, também existem organizações como CIEE e Nube, que atuam na interm
 
 Apesar dessas soluções, a maioria dos sistemas é focada em processos burocráticos, com pouca automação inteligente. Observa-se uma oportunidade de melhoria na integração entre sistemas, análise automatizada de desempenho e validação mais eficiente dos relatórios de estágio.
 
-## 6. Levantamento de Legislação
+# 6. Levantamento de Legislação
 
-### 6.1 Legislação Trabalhista
-O principal marco legal que rege os estágios no Brasil é a Lei nº 11.788/2008, conhecida como Lei do Estágio. Essa lei regula a atividade de estágio, definindo quem pode estagiar, os direitos do estudante, as obrigações das instituições de ensino e das empresas, além de estabelecer limites para evitar a caracterização de vínculo empregatício.
+## 6.1 Legislação Trabalhista (Lei nº 11.788/2008)
 
-Definição: O estágio é um ato educativo escolar supervisionado, desenvolvido no ambiente de trabalho, com o objetivo de preparar o estudante para o trabalho produtivo.
+A Lei nº 11.788/2008 estabelece o marco legal dos estágios no Brasil, definindo o estágio como um ato educativo supervisionado, com finalidade de preparação para o trabalho. A lei busca garantir que o estágio tenha caráter pedagógico e não seja utilizado como substituição de mão de obra formal.
 
-Tipos: O estágio pode ser obrigatório ou não obrigatório.
+Entre os principais pontos, destaca-se a exigência do Termo de Compromisso de Estágio (TCE), documento obrigatório firmado entre estudante, instituição de ensino e empresa concedente. Esse termo define as atividades, jornada, duração e responsabilidades de cada parte.
 
-Jornada: A carga horária do estágio deve ser de até 4 ou 6 horas diárias, conforme acordado.
+A lei também determina a obrigatoriedade de um plano de atividades, que deve estar alinhado ao curso do estudante, além da supervisão por um profissional da empresa e acompanhamento por um professor orientador da instituição de ensino.
 
-Direitos: O estagiário tem direito a recesso e, no caso de estágio não obrigatório, bolsa auxílio e auxílio-transporte.
+Em relação à jornada, a lei limita a carga horária a 4 horas diárias e 20 semanais para estudantes de educação especial e anos finais do ensino fundamental, e até 6 horas diárias e 30 semanais para ensino superior e técnico.
 
-Vínculo empregatício: O descumprimento da lei pode gerar vínculo empregatício.
+Outro ponto relevante é a obrigatoriedade de concessão de bolsa auxílio e auxílio-transporte nos estágios não obrigatórios. Além disso, o estagiário tem direito a recesso de 30 dias a cada 12 meses, preferencialmente durante as férias escolares.
 
-Segurança: Aplica-se a legislação de saúde e segurança no trabalho.
+A lei também estabelece limites para a quantidade de estagiários por empresa, com base no número de empregados, e exige a contratação de seguro contra acidentes pessoais.
 
-### 6.2 Regulamentação do MEC
-O MEC estabelece diretrizes por meio das DCNs, que orientam a obrigatoriedade e estrutura dos estágios nos cursos superiores.
+O descumprimento dessas exigências pode descaracterizar o estágio, gerando vínculo empregatício e obrigando a empresa a cumprir todas as obrigações trabalhistas e previdenciárias.
 
-Bacharelados: Até cerca de 20% da carga horária total.
+## 6.2 Regulamentação do MEC (Diretrizes Curriculares Nacionais)
 
-Licenciaturas: Mínimo de 400 horas.
+O Ministério da Educação, por meio do Conselho Nacional de Educação (CNE), define as Diretrizes Curriculares Nacionais (DCNs), que orientam como o estágio deve ser integrado à formação acadêmica.
 
-Jornada máxima: Até 6 horas diárias e 30 semanais.
+As DCNs estabelecem que o estágio deve estar previsto no Projeto Pedagógico do Curso (PPC), garantindo que ele seja parte do processo formativo e não apenas uma atividade isolada.
 
-Responsabilidade institucional: Cabe às instituições regulamentar os estágios.
+Nos cursos de bacharelado, o estágio geralmente não deve ultrapassar 20% da carga horária total do curso, salvo exceções previstas em legislação específica. Já nas licenciaturas, é obrigatório o cumprimento mínimo de 400 horas de estágio supervisionado, iniciadas na segunda metade do curso.
 
-### 6.3 Regulamento IBMEC
-O regulamento de estágio do IBMEC complementa a legislação nacional, definindo regras específicas para os alunos da instituição.
+As diretrizes também reforçam que o estágio deve ser acompanhado por um professor orientador, que é responsável por avaliar o desempenho do aluno e garantir a coerência entre as atividades realizadas e os objetivos do curso.
 
-O estágio só é válido quando o aluno está regularmente matriculado e com documentação formalizada, como termo de compromisso e convênio entre as partes.
+Outro aspecto importante é a necessidade de integração entre teoria e prática, sendo o estágio um momento de aplicação dos conhecimentos adquiridos ao longo da graduação.
 
-A não entrega de documentos obrigatórios pode caracterizar o estágio como irregular, impedindo sua validação acadêmica.
+Além disso, cabe às instituições de ensino definir normas internas para o estágio, incluindo critérios de avaliação, documentação exigida, prazos e formas de acompanhamento.
 
-O regulamento também estabelece a necessidade de acompanhamento por um supervisor, além da elaboração de plano de atividades, avaliação parcial e relatório final de estágio.
+## 6.3 Regulamento IBMEC
 
-Além disso, o cumprimento das exigências de estágio é condição para a conclusão do curso e participação na colação de grau.  
+O regulamento de estágio do IBMEC detalha a aplicação prática das normas legais dentro da instituição, estabelecendo procedimentos específicos para validação e acompanhamento dos estágios dos alunos.
 
-Dessa forma, o IBMEC atua diretamente na gestão do estágio, garantindo controle, acompanhamento e validação das atividades realizadas.
+O estágio só é reconhecido quando o aluno está regularmente matriculado e possui toda a documentação exigida devidamente formalizada, incluindo o Termo de Compromisso de Estágio e, quando necessário, convênios entre a instituição e a empresa concedente.
+
+O regulamento também exige a elaboração de um plano de atividades, que deve ser aprovado previamente e estar alinhado ao curso do estudante. Esse plano serve como base para o acompanhamento e avaliação do estágio.
+
+Durante o período de estágio, o aluno deve apresentar relatórios periódicos, que são avaliados por um professor orientador. Além disso, é exigida a supervisão direta por um profissional da empresa, garantindo o acompanhamento das atividades no ambiente de trabalho.
+
+O não cumprimento das exigências documentais ou acadêmicas pode resultar na não validação do estágio, impactando diretamente a progressão do aluno no curso e podendo impedir a colação de grau.
+
+O regulamento também define prazos, fluxos de aprovação e responsabilidades das partes envolvidas, reforçando o papel da instituição na gestão e controle do estágio.
+
+Dessa forma, o IBMEC atua como agente central na gestão do estágio, garantindo conformidade com a legislação e qualidade no processo formativo.
 
 ## 7. Validação de Relatório Automática
 A validação de relatórios de estágio é uma etapa essencial na gestão do processo, pois garante que as atividades realizadas pelo estagiário estejam alinhadas com os objetivos acadêmicos e com o plano de atividades definido.
