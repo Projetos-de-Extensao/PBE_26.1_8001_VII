@@ -3,7 +3,7 @@
 **Código da Disciplina**: IBM8936<br>
 
 ## Sobre 
-Tema: Gestão de Estágio
+Repositório do Grupo VII de Projeto Back-End
 - Gabriel Barreto
 - Guilherme Braz
 - Ísis Tavares
