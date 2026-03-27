@@ -6,16 +6,32 @@ title: Pesquisa sobre Gestão de estágio
 # Pesquisa sobre Gestão de Estágio
 
 ## 1. Contexto do Projeto
-A gestão de estágios na fase de iniciação apresenta desafios relacionados ao acompanhamento do estagiário, alinhamento entre teoria e prática e cumprimento das exigências legais. Muitas instituições de ensino e empresas enfrentam dificuldades em organizar, monitorar e avaliar as atividades de estágio de forma eficiente, o que pode comprometer a qualidade da formação do estudante.
+
+A gestão de estágios na fase de iniciação constitui um elemento fundamental na formação acadêmica, pois representa o primeiro contato do estudante com o ambiente profissional. Nesse contexto, surgem desafios relacionados à integração entre teoria e prática, ao acompanhamento efetivo das atividades e ao cumprimento das exigências legais e institucionais.
+
+Além disso, muitas instituições de ensino e empresas enfrentam dificuldades na padronização dos processos de estágio, no controle das atividades desenvolvidas e na avaliação do desempenho dos estagiários. A ausência de mecanismos eficientes de acompanhamento pode comprometer tanto a qualidade da experiência do estudante quanto a efetividade do estágio como instrumento de aprendizagem.
+
+Dessa forma, torna-se necessário compreender como ocorre a gestão de estágios nesse nível inicial, identificando lacunas e oportunidades de melhoria.
 
 ## 2. Objetivo
-O objetivo deste projeto é analisar como ocorre a gestão de estágios na fase de iniciação, identificando boas práticas, desafios e possíveis melhorias, com foco no alinhamento entre legislação, instituições de ensino e empresas.
+
+O presente projeto tem como objetivo analisar a gestão de estágios na fase de iniciação, considerando os aspectos legais, institucionais e operacionais envolvidos.
+
+Busca-se identificar boas práticas adotadas por instituições e empresas, bem como os principais desafios enfrentados no acompanhamento e avaliação dos estagiários. Além disso, pretende-se compreender como as diretrizes legais e acadêmicas influenciam esse processo e de que forma ele pode ser aprimorado para garantir maior eficiência e qualidade na formação do estudante.
 
 ## 3. Público-Alvo
-O público-alvo inclui estudantes em fase inicial de estágio, instituições de ensino superior, empresas concedentes de estágio e supervisores responsáveis pelo acompanhamento das atividades.
+
+O público-alvo deste estudo é composto por estudantes em fase inicial de estágio, que estão em processo de inserção no mercado de trabalho, além de instituições de ensino superior, responsáveis pela regulamentação e acompanhamento acadêmico.
+
+Também fazem parte desse público as empresas concedentes de estágio, que atuam como ambiente de aprendizagem prática, e os supervisores e professores orientadores, que desempenham papel essencial no monitoramento e avaliação das atividades desenvolvidas.
 
 ## 4. Escopo
-O projeto abrange a análise da legislação vigente, das diretrizes do MEC e das práticas de gestão de estágio na fase de iniciação. Não inclui o desenvolvimento de sistemas ou soluções tecnológicas, sendo restrito à pesquisa e análise teórica.
+
+Este projeto está limitado à análise da gestão de estágios na fase de iniciação, com foco nos aspectos legais, institucionais e operacionais que estruturam esse processo.
+
+Serão considerados a legislação vigente (Lei do Estágio), as diretrizes estabelecidas pelo MEC e os regulamentos institucionais, bem como práticas adotadas por organizações e instituições de ensino.
+
+O estudo não contempla o desenvolvimento de sistemas ou soluções tecnológicas, concentrando-se exclusivamente na pesquisa teórica e análise das práticas existentes, com o objetivo de identificar oportunidades de melhoria na gestão do estágio.
 
 ## 5. Análise de Aplicações e Mercado
 Atualmente, diversas instituições de ensino utilizam sistemas próprios ou plataformas digitais para gerenciar estágios, com foco principalmente no controle de documentos, carga horária e validação acadêmica.
