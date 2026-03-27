@@ -53,13 +53,13 @@ Responsabilidade institucional: Cabe às instituições regulamentar os estágio
 ### 6.3 Regulamento IBMEC
 O regulamento de estágio do IBMEC complementa a legislação nacional, definindo regras específicas para os alunos da instituição.
 
-O estágio só é válido quando o aluno está regularmente matriculado e com documentação formalizada, como termo de compromisso e convênio entre as partes. :contentReference[oaicite:0]{index=0}  
+O estágio só é válido quando o aluno está regularmente matriculado e com documentação formalizada, como termo de compromisso e convênio entre as partes.
 
-A não entrega de documentos obrigatórios pode caracterizar o estágio como irregular, impedindo sua validação acadêmica. :contentReference[oaicite:1]{index=1}  
+A não entrega de documentos obrigatórios pode caracterizar o estágio como irregular, impedindo sua validação acadêmica.
 
-O regulamento também estabelece a necessidade de acompanhamento por um supervisor, além da elaboração de plano de atividades, avaliação parcial e relatório final de estágio. :contentReference[oaicite:2]{index=2}  
+O regulamento também estabelece a necessidade de acompanhamento por um supervisor, além da elaboração de plano de atividades, avaliação parcial e relatório final de estágio.
 
-Além disso, o cumprimento das exigências de estágio é condição para a conclusão do curso e participação na colação de grau. :contentReference[oaicite:3]{index=3}  
+Além disso, o cumprimento das exigências de estágio é condição para a conclusão do curso e participação na colação de grau.  
 
 Dessa forma, o IBMEC atua diretamente na gestão do estágio, garantindo controle, acompanhamento e validação das atividades realizadas.
 
