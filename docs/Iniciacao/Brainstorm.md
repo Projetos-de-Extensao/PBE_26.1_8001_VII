@@ -22,16 +22,16 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via..., começou .
 ### 1. Qual o objetivo principal da aplicação?
  
 <p align = "justify">
-<b>XXXX</b> - Deve ser uma plataforma onde qualquer pessoa possa...
+<b>1</b> - Deve ser uma plataforma capaz de submeter, acompanhar e validar documentos de estágio de forma automatizada.
 </p>
  
-<b>ZZZ</b> - A plataforma deve fornece...
+<b>2</b> - A plataforma deve fornecer um sistema de análise que verifique a conformidade dos contratos com a legislação vigente e as diretrizes acadêmicas.
  
-<b>YYYY</b> - O objetivo da aplicação é....
+<b>3</b> - O objetivo da aplicação é automatizar o processo de validação de estágios, reduzindo tempo e erros manuais.
  
-<b>WWWW</b> - O principal objetivo da aplicação é a...
+<b>4</b> - O principal objetivo da aplicação é a otimização do fluxo administrativo e a padronização da verificação dos contratos de estágio.
  
-<b>KKKK</b> - A plataforma deve gerenciar...
+<b>5</b> - A plataforma deve gerenciar o recebimento, processamento e retorno das validações dos estágios, incluindo relatórios detalhados para alunos e coordenação.
 </p>
  
 ---
@@ -39,31 +39,31 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via..., começou .
 ### 2. Como será o processo para cadastrar um novo cliente?
  
 <p align = "justify">
-<b>XXXX</b> - O moderador deverá fazer login e...
+<b>1</b> - O moderador deverá fazer login e acessar a área de gerenciamento de usuários para autorizar novos cadastros.
  
-<b>YYYY</b> - O cliente...
+<b>2</b> - O cliente deverá preencher um formulário com seus dados pessoais e acadêmicos.
  
-<b>WWWW</b> - Com o usuário logado, ele deverá...
+<b>3</b> - Com o usuário logado, ele deverá validar as informações inseridas e confirmar o cadastro no sistema.
 
-<b>ZZZZ</b> - O cliente...
+<b>4</b> - O cliente fará uso de um token para autenticar as requisições.
  
-<b>KKK</b> - O cliente...
+<b>5</b> - O cliente poderá enviar os dados e o sistema irá verificar sua legibilidade.
  
 ---
  
 ### 3. Como será a forma de adicionar produtos?
  
 <p align = "justify">
-<b>XXXX</b> - O cliente ao cadastrar...
+<b>1</b> - O cliente, ao cadastrar um estágio, deverá inserir as informações do contrato e anexar os documentos necessários.
 </p>
  
 <p align = "justify">
-<b>YYYYY</b> - O produto tem...
+<b>2</b> - O “produto” (estágio) possui dados como carga horária, empresa concedente, período e informações do aluno.
 </p>
  
-<b>ZZZZ</b> - O produto....
+<b>3</b> - O estágio será enviado para processamento, onde passará pelas validações automáticas definidas no sistema.
  
-<b>XXXX</b> - O produto....
+<b>4</b> - O estágio poderá ser aprovado ou reprovado, com retorno detalhado indicando possíveis pendências ou inconsistências.
 
  
 ---
@@ -71,26 +71,26 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via..., começou .
 ### 4. Outras perguntas pertinentes ao contexto
 
 <p align = "justify">
-<b>XXXX</b> - Com a localização...
+<b>1</b> - Com a centralização das informações na plataforma, será possível acompanhar o status das validações em tempo real?
  
-<b>YYYY</b> - O cliente...
+<b>2</b> - O cliente poderá consultar o histórico de envios e verificar os resultados das análises realizadas?
  
-<b>ZZZ</b> - O cliente...
+<b>3</b> - O cliente poderá receber feedback detalhado sobre pendências e realizar ajustes para nova submissão dos documentos?
  
 ---
  
 ### 5. "Outras perguntas pertinentes ao contexto", Como seria a forma de adicionar do cliente adicionar os produtos ?
 <p align = "justify">
-<b>XXX</b> - O cliente....
+<b>1/b> - O cliente deverá acessar a plataforma e preencher um formulário com os dados do estágio, anexando os documentos necessários para submissão.
 </p>
  
 ### 6. Quais informações seriam interessante para o cliente?
 <p align = "justify">
-   <b>XXX</b> - Informações...
+   <b>1</b> - Informações sobre o status da validação do estágio (aprovado, reprovado ou pendente), com detalhes das inconsistências.
    
-   <b>ZZZZ</b> - O cliente usuário poderá acessar informações...
+   <b>2</b> - O cliente usuário poderá acessar informações sobre o histórico de submissões, documentos enviados e feedbacks recebidos.
 
-   <b>WWWWs</b> - O usuário poderá ver scouts de partidas do torneio, ver as regras dos torneios, locais e data das partidas.
+   <b>3</b> - O usuário poderá visualizar as regras acadêmicas e legais aplicáveis ao estágio, prazos, exigências e orientações para aprovação.
    
 </p>
  
@@ -98,21 +98,21 @@ A equipe se reuniu para debater ideias gerais sobre o projeto via..., começou .
  
 |ID|Descrição|
 |----|-------------|
-|BS01| O cliente...|
-|BS02| O cliente...|
-|BS03| O cliente...|
-|BS04| O cliente...|
-|BS05| O cliente...|
-|BS06| O cliente...|
-|BS07| O cliente...|
-|BS08| O cliente...|
-|BS09| O cliente...|
-|BS10| O produto...|
-|BS11| O produto...|
-|BS12| O produto...|
-|BS13| O produto...|
-|BS14| O produto...|
-|BS15| O produto...|
+|BS01| O cliente poderá realizar cadastro na plataforma informando dados pessoais e acadêmicos.|
+|BS02| O cliente poderá autenticar-se no sistema utilizando credenciais seguras.|
+|BS03| O cliente poderá submeter documentos de estágio para validação.|
+|BS04| O cliente poderá acompanhar o status da validação em tempo real.|
+|BS05| O cliente poderá visualizar o histórico de submissões realizadas.|
+|BS06| O cliente poderá receber feedback detalhado sobre pendências ou reprovações.|
+|BS07| O cliente poderá atualizar seus dados cadastrais.|
+|BS08| O cliente poderá reenviar documentos após correções.|
+|BS09| O cliente poderá consultar regras e orientações para validação de estágio.|
+|BS10| O produto deverá processar os dados dos contratos submetidos.|
+|BS11| O produto deverá aplicar regras de validação baseadas na Lei 11.788/08 e diretrizes institucionais.|
+|BS12| O produto deverá retornar o resultado da validação (aprovado ou reprovado).|
+|BS13| O produto deverá gerar relatórios detalhados com justificativas das análises.|
+|BS14| O produto deverá armazenar os dados e histórico das validações em banco de dados.|
+|BS15| O produto deverá garantir a integridade e segurança das informações processadas.|
  
 ## Conclusão
 <p align = "justify">
@@ -125,5 +125,4 @@ Através da aplicação da técnica, foi possível elicitar alguns dos primeiros
  
 ## Autor(es)
 | Data | Versão | Descrição | Autor(es) |
-| -- | -- | -- | -- |
-| DD/MM/YYYY | 1.0 | Criação do documento | XXX XXXX, XXXX XXXX, YYY YYYY e ZZZ XXXX |
+| 02/04/2026 | 1.0 | Criação do documento | Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria, Matheus Avarenga|
