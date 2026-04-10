@@ -6,19 +6,12 @@ copyright: Copyright ©️ 2026, Jonh Carvalho
 
 nav: 
   - Home: index.md
-  - Disciplina:
-      - Aulas: Disciplina/aulas.md
-      - Ambiente: Disciplina/ambiente.md
-      - Github: Disciplina/github.md
-      - Mkdocs: Disciplina/mkdocs.md
-      - CodeSpace: Disciplina/codespace.md
-      - Avaliações: Disciplina/avaliacoes.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
       - 5w2h: Iniciacao/5w2h.md
       - Design Thinking: Iniciacao/design_thinking.md
-      - Brainstorming: Iniciacao/brainstorm.md
+      - Brainstorm: Iniciacao/brainstorm.md
       - Mapa Mental: Iniciacao/mapa_mental.md
       - Prototipagem Baixa Fidelidade: Iniciacao/prototipo_baixa_fidelidade.md
   - Elaboração:
@@ -35,8 +28,6 @@ nav:
       - CodeSpace: Construcao/codespace.md
   - Transição:
       - Index: Transicao/index.md
-
-  - Bibliografia: Disciplina/bibliografia.md
 
 extra_css:
   - css/extra.css
@@ -109,15 +100,15 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: deep purple
       accent: black
       toggle:
         icon: material/toggle-switch-off
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep orange
-      accent: amber
+      primary: blue
+      accent: cyan
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
