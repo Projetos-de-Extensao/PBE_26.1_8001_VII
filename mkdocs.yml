@@ -1,7 +1,7 @@
 ---
 repo_url: https://github.com/Projetos-de-Extensao/PBE_26.1_8001_VII
 site_author: Jonh Carvalho
-site_name: PBE_26.1_8001
+site_name: PBE_26.1_8001_VII
 copyright: Copyright ©️ 2026, Jonh Carvalho
 
 nav: 
@@ -89,9 +89,9 @@ plugins:
   - search
 
 theme:
-  favicon: assets/ibmec_icon.png
+  favicon: assets/ibmec-icon.png
   name: material
-  logo: assets/ibmec_logo.png
+  logo: assets/logo-ibmec.png
   palette:
     
     - media: "(prefers-color-scheme)"
