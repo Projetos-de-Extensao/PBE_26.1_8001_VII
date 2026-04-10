@@ -3,6 +3,7 @@ repo_url: https://github.com/Projetos-de-Extensao/PBE_26.1_8001_VII
 site_author: Jonh Carvalho
 site_name: PBE_26.1_8001_VII
 copyright: Copyright ©️ 2026, Jonh Carvalho
+docs_dir: docs
 
 nav: 
   - Home: index.md
@@ -33,6 +34,9 @@ extra_css:
   - css/extra.css
 
 markdown_extensions:
+  - plantuml_markdown:
+      server: https://www.plantuml.com/plantuml
+      format: svg
   # Tooltips
   - abbr
   # Admonitions
@@ -79,6 +83,7 @@ markdown_extensions:
   # Formatting
   - pymdownx.tilde
   # Data Tables
+  
 
   - toc:
       permalink: true
@@ -86,10 +91,12 @@ markdown_extensions:
 plugins:
   - minify:
       minify_html: true
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      format: svg
   - search
-
+  
 theme:
-  favicon: assets/ibmec-icon.png
   name: material
   logo: assets/logo-ibmec.png
   palette:
