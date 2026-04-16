@@ -2,7 +2,7 @@
 id: levantamento de requisitos
 title: Levantamento de Requisitos
 ---
-# **06 - Levantamento de Requisitos e Caso de Uso**
+# **06 - Levantamento de Requisitos**
 
 **Sistema:** Sistema para validar estágios*)
 
