@@ -199,7 +199,7 @@ Avaliação acadêmica é independente da validação legal.
 
 ---
 
-##UC09 – Assinatura de Documentos
+## UC09 – Assinatura de Documentos
 
 Ator: Empresa Parceira
 Objetivo: Formalizar participação da empresa.
