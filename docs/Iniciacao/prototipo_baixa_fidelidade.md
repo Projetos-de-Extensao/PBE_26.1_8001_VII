@@ -152,47 +152,6 @@ end note
 ```
 
 ### Tela Esqueceu Senha
-```puml
-@startuml
-title UC03 – Detectar Inconsistências
-
-skinparam monochrome true
-skinparam shadowing false
-
-
-
-note right of R
-Ator:
-Sistema
-
-Objetivo:
-Detectar inconsistências e gerar correções automáticas
-
-Pré-requisito:
-Validação concluída
-
-----------------------------------------
-
-Fluxo principal:
-- O sistema analisa os resultados
-- Gera lista de pendências
-- Associa cada erro a uma regra
-- Retorna ao estudante
-
-----------------------------------------
-
-Pós-requisito:
-Pendências registradas e exibidas
-
-----------------------------------------
-
-Regras de negócio:
-- Cada pendência deve conter descrição clara
-- Deve indicar exatamente o documento afetado
-end note
-
-@enduml
-```
 ### Tela do Feed
 ```puml
 
@@ -282,7 +241,57 @@ end note
 
 ### Tela Perfil
 
-[![Prototipo 7](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam handwritten false
+
+skinparam rectangle {
+  BackgroundColor #EDEDED
+  BorderColor black
+  FontColor black
+  RoundCorner 0
+}
+
+title Protótipo de Baixa Fidelidade - Painel de Monitoramento
+
+rectangle "Painel de Monitoramento" as painel {
+
+  rectangle "Coordenação" as usuario
+
+  rectangle "Período:\n____________________" as filtro1
+  rectangle "Unidade/Setor:\n____________________" as filtro2
+  rectangle "Status:\n____________________" as filtro3
+
+  rectangle "   Aplicar Filtros   " as botao
+
+  rectangle "Indicador 1:\nDisponibilidade\n____________________" as ind1
+  rectangle "Indicador 2:\nTempo de resposta\n____________________" as ind2
+  rectangle "Indicador 3:\nOcorrências\n____________________" as ind3
+  rectangle "Indicador 4:\nTaxa de uso\n____________________" as ind4
+
+  rectangle "Atualização:\nTempo real" as atualizacao
+  rectangle "Resultado:\nVisão consolidada disponível" as resultado
+}
+
+usuario -[hidden]down- filtro1
+filtro1 -[hidden]down- filtro2
+filtro2 -[hidden]down- filtro3
+filtro3 -[hidden]down- botao
+botao -[hidden]down- ind1
+ind1 -[hidden]right- ind2
+ind1 -[hidden]down- ind3
+ind3 -[hidden]right- ind4
+ind3 -[hidden]down- atualizacao
+atualizacao -[hidden]down- resultado
+
+note right of atualizacao
+Regra de negócio:
+dados atualizados em tempo real.
+end note
+
+@enduml
 
 ### Tela Cadastrar torneio 1
 
