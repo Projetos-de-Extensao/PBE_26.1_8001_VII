@@ -106,8 +106,50 @@ Regras:
 
 
 ### Tela Cadastro 2
+```puml
+@startuml
+title UC03 – Detectar Inconsistências
 
-[![Prototipo 3](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam monochrome true
+skinparam shadowing false
+
+
+
+note right of R
+Status:
+Analisando resultados ___________________
+
+Pendências:
+Gerando lista ___________________________
+
+Regras:
+Associando erros às regras _____________
+
+Retorno:
+Enviando ao estudante ___________________
+
+----------------------------------------
+
+[ Processar ]
+[ Atualizar ]
+
+----------------------------------------
+
+Mensagem:
+Pendências identificadas
+
+Detalhes:
+Descrição clara da pendência ___________
+Documento afetado ______________________
+
+Regras de Negócio:
+- Cada pendência deve ser clara
+- Indicar documento afetado
+end note
+
+@enduml
+
+```
 
 ### Tela Esqueceu Senha
 
