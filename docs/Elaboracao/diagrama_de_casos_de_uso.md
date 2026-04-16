@@ -3,6 +3,7 @@ id: diagrama_de_casos_de_uso
 title: Diagrama de Casos de Uso
 ---
 ## Casos de uso
+```plantuml
 @startuml Sistema_Validacao_Estagios
 
 left to right direction
@@ -134,6 +135,7 @@ note right of UC08
 end note
 
 @enduml
+```
 ---
 # Explicação
 
