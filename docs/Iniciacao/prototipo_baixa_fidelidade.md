@@ -152,9 +152,47 @@ end note
 ```
 
 ### Tela Esqueceu Senha
+```puml
+@startuml
+title UC03 – Detectar Inconsistências
 
-[![Prototipo 4](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam monochrome true
+skinparam shadowing false
 
+
+
+note right of R
+Ator:
+Sistema
+
+Objetivo:
+Detectar inconsistências e gerar correções automáticas
+
+Pré-requisito:
+Validação concluída
+
+----------------------------------------
+
+Fluxo principal:
+- O sistema analisa os resultados
+- Gera lista de pendências
+- Associa cada erro a uma regra
+- Retorna ao estudante
+
+----------------------------------------
+
+Pós-requisito:
+Pendências registradas e exibidas
+
+----------------------------------------
+
+Regras de negócio:
+- Cada pendência deve conter descrição clara
+- Deve indicar exatamente o documento afetado
+end note
+
+@enduml
+```
 ### Tela do Feed
 
 [![Prototipo 5](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
