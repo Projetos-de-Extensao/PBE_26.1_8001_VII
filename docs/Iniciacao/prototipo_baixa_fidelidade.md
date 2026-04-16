@@ -60,6 +60,7 @@ end note
 ```
 ### Tela Cadastro 1
 
+```puml
 @startuml
 title UC02 – Validar Documentos
 
@@ -101,6 +102,7 @@ Regras:
 }
 
 @enduml
+```
 
 
 ### Tela Cadastro 2
