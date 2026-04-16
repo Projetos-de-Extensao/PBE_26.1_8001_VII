@@ -20,7 +20,43 @@ Iniciamos o projeto através dos levantamentos iniciais da equipe, após discuss
 
 ### Tela Login
 
-[![Prototipo 1](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+@startuml
+title UC01 – Submeter Documentos de Estágio
+
+skinparam monochrome true
+skinparam shadowing false
+
+
+
+note right of R
+Matrícula:
+Digite sua matrícula ____________________
+
+Tipo de Documento:
+Selecione o tipo ________________________
+
+Upload:
+Escolher arquivo ________________________
+
+Dados Complementares:
+Descrição _______________________________
+Data ___________________________________
+
+----------------------------------------
+
+[ Entrar / Enviar ]
+
+----------------------------------------
+
+Mensagem:
+Arquivo inválido → envie PDF
+
+Regras:
+- Apenas PDF ou equivalentes
+- Todos os documentos obrigatórios
+end note
+
+@enduml
 
 ### Tela Cadastro 1
 
