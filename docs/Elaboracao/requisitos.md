@@ -4,7 +4,7 @@ title: Levantamento de Requisitos
 ---
 # **06 - Levantamento de Requisitos**
 
-**Sistema:** Sistema para validar estágios*)
+**Sistema:** Sistema para validar estágios
 
 ---
 
