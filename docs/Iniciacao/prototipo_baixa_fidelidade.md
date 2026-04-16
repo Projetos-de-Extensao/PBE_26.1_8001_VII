@@ -194,8 +194,46 @@ end note
 @enduml
 ```
 ### Tela do Feed
+```puml
 
-[![Prototipo 5](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+@startuml
+title UC04 – Notificações do Processo
+
+skinparam monochrome true
+skinparam shadowing false
+
+rectangle "Notificações do Sistema" as R
+
+note right of R
+Atores:
+Sistema, Estudante
+
+Objetivo:
+Informar eventos relevantes do processo
+
+Pré-requisito:
+Existência de solicitação ativa
+
+----------------------------------------
+
+Fluxo principal:
+- O sistema identifica mudança de estado
+- Gera notificação
+- Envia ao estudante
+
+----------------------------------------
+
+Pós-requisito:
+Usuário informado
+
+----------------------------------------
+
+Regras de negócio:
+- Notificações em tempo real ou próximo disso
+end note
+
+@enduml
+```
 
 ### Tela Feed com configurações
 
