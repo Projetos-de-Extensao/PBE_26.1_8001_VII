@@ -236,8 +236,49 @@ end note
 ```
 
 ### Tela Feed com configurações
+```puml
+@startuml
+title UC05 – Acompanhamento do Processo
 
-[![Prototipo 6](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam monochrome true
+skinparam shadowing false
+
+
+
+note right of R
+Ator:
+Estudante
+
+Objetivo:
+Permitir acompanhamento do processo
+
+Pré-requisito:
+Solicitação existente
+
+----------------------------------------
+
+Fluxo principal:
+- O estudante acessa suas solicitações
+- O sistema exibe status:
+  • Em validação
+  • Pendente
+  • Validado
+  • Em exceção
+- Exibe histórico do processo
+
+----------------------------------------
+
+Pós-requisito:
+Status visualizado
+
+----------------------------------------
+
+Regras de negócio:
+- Histórico deve ser imutável
+end note
+
+@enduml
+```
 
 ### Tela Perfil
 
