@@ -60,7 +60,48 @@ end note
 ```
 ### Tela Cadastro 1
 
-[![Prototipo 2](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+@startuml
+title UC02 – Validar Documentos
+
+skinparam monochrome true
+skinparam shadowing false
+
+rectangle "Validação de Documentos" {
+Status:
+Iniciando validação ____________________
+
+Regras Legais:
+Aplicando Lei 11.788/2008 _____________
+
+Regras Institucionais:
+Validando critérios internos ___________
+
+Análise:
+Identificando inconsistências __________
+
+Score de Conformidade:
+Calculando ____________________________
+
+----------------------------------------
+
+[ Processar ]
+[ Atualizar ]
+
+----------------------------------------
+
+Mensagem:
+Falha na leitura -> documento inválido
+
+Resultado:
+Validação registrada ___________________
+
+Regras:
+- Tempo máximo: 15 segundos
+- Score baseado na conformidade
+}
+
+@enduml
+
 
 ### Tela Cadastro 2
 
