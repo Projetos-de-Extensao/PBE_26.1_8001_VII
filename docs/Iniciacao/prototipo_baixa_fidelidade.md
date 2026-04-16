@@ -19,7 +19,7 @@ Iniciamos o projeto através dos levantamentos iniciais da equipe, após discuss
 ### Versão 1.0
 
 ### Tela Login
-
+```puml
 @startuml
 title UC01 – Submeter Documentos de Estágio
 
@@ -57,7 +57,7 @@ Regras:
 end note
 
 @enduml
-
+```
 ### Tela Cadastro 1
 
 [![Prototipo 2](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
