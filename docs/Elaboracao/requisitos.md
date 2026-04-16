@@ -14,7 +14,7 @@ title: Levantamento de Requisitos
 - **Estudantes:** Quem solicita a validação do estágio.
 - **Empresas parceiras:** Organizações que ofertam o estágio, fornecem informações contratuais e realizam assinaturas necessárias para validação.
 - **Coordenação de estágio / coordenação de curso:** Responsáveis por supervisionar o processo automatizado, validar documentos, acompanhar indicadores, solicitar correções e validar exceções.
-- 
+
 ---
 
 ### **2. Requisitos Funcionais**
