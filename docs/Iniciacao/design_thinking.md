@@ -188,4 +188,4 @@ O processo de Design Thinking permitiu mapear com clareza o problema enfrentado 
 
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| 16/04/2026 | 1.0 | Criação do documento de Design Thinking | Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria e Matheus Alvarenga |
+| 16/04/2026 | 1.0 | Criação do Design Thinking | Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria e Matheus Alvarenga |
