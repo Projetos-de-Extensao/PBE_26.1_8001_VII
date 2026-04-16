@@ -32,6 +32,7 @@ Regras de negócio:
 
 Apenas formatos PDF ou equivalentes são aceitos.
 Todos os documentos obrigatórios devem ser enviados.
+
 ---
 
 ## UC02 – Validação Automática
@@ -59,6 +60,7 @@ Regras de negócio:
 
 A validação deve ocorrer em até 15 segundos.
 O score deve refletir o nível de conformidade dos documentos.
+
 ---
 
 ## UC03 – Identificar Pendências
@@ -81,6 +83,7 @@ Regras de negócio:
 
 Cada pendência deve conter descrição clara.
 Deve indicar exatamente o documento afetado.
+
 ---
 
 ## UC04 – Notificar Usuários
@@ -101,6 +104,7 @@ Pós-requisito: Usuário informado.
 Regras de negócio:
 
 Notificações devem ocorrer em tempo real ou próximo disso.
+
 ---
 
 ## UC05 – Consultar Status da Solicitação
@@ -125,6 +129,7 @@ Pós-requisito: Status visualizado.
 Regras de negócio:
 
 Histórico deve ser imutável.
+
 ---
 
 ## UC06 – Painel Gerencial
@@ -145,6 +150,7 @@ Pós-requisito: Visão consolidada disponível.
 Regras de negócio:
 
 Dados devem ser atualizados em tempo real.
+
 ---
 
 ## UC07 – Analisar Exceções
@@ -168,6 +174,7 @@ Pós-requisito: Caso resolvido manualmente.
 Regras de negócio:
 
 Intervenção manual só ocorre em exceções.
+
 ---
 
 ## UC08 – Avaliar Relatório de Estágio
@@ -189,6 +196,7 @@ Pós-requisito: Avaliação registrada.
 Regras de negócio:
 
 Avaliação acadêmica é independente da validação legal.
+
 ---
 
 ##UC09 – Assinatura de Documentos
@@ -210,6 +218,7 @@ Pós-requisito: Documento assinado.
 Regras de negócio:
 
 Assinatura deve garantir autenticidade e integridade.
+
 ---
 
 ## UC10 – Acessar Modelos de Documentos
@@ -230,6 +239,9 @@ Pós-requisito: Documento obtido.
 Regras de negócio:
 
 Modelos devem estar sempre atualizados conforme normas institucionais.
+
+---
+
 ## Autor(es)
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
