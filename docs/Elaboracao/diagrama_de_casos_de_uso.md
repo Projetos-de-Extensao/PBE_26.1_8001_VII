@@ -3,7 +3,137 @@ id: diagrama_de_casos_de_uso
 title: Diagrama de Casos de Uso
 ---
 ## Casos de uso
+@startuml Sistema_Validacao_Estagios
 
+left to right direction
+skinparam actorStyle awesome
+
+actor Estudante
+actor "Empresa Parceira" as Empresa
+actor Professor
+actor Coordenacao
+actor Sistema
+
+' ===== CASOS PRINCIPAIS =====
+
+usecase (UC01: Submeter Documentos de Estágio) as UC01
+usecase (Selecionar Tipo de Documento) as UC01_1
+usecase (Realizar Upload) as UC01_2
+usecase (Preencher Dados Complementares) as UC01_3
+
+usecase (UC02: Validação Automática) as UC02
+usecase (Validar Regras Legais) as UC02_1
+usecase (Validar Regras Institucionais) as UC02_2
+usecase (Gerar Score de Conformidade) as UC02_3
+usecase (Erro de Validação) as FA01
+
+usecase (UC03: Identificar Pendências) as UC03
+usecase (Gerar Lista de Inconsistências) as UC03_1
+usecase (Retornar Correções ao Aluno) as UC03_2
+
+usecase (UC04: Notificar Usuários) as UC04
+usecase (Notificar Mudança de Status) as UC04_1
+usecase (Notificar Pendências) as UC04_2
+
+usecase (UC05: Consultar Status da Solicitação) as UC05
+usecase (Visualizar Histórico) as UC05_1
+
+usecase (UC06: Painel Gerencial) as UC06
+usecase (Visualizar Indicadores) as UC06_1
+usecase (Filtrar Solicitações) as UC06_2
+
+usecase (UC07: Analisar Exceções) as UC07
+usecase (Revisar Solicitação Inconsistente) as UC07_1
+usecase (Aprovar Exceção) as UC07_2
+usecase (Solicitar Ajuste Manual) as UC07_3
+
+usecase (UC08: Avaliar Relatório de Estágio) as UC08
+usecase (Ler Relatório) as UC08_1
+usecase (Emitir Parecer) as UC08_2
+usecase (Atribuir Conceito) as UC08_3
+
+usecase (UC09: Assinatura de Documentos) as UC09
+usecase (Validar Dados da Empresa) as UC09_1
+usecase (Registrar Assinatura) as UC09_2
+
+usecase (UC10: Acessar Modelos de Documentos) as UC10
+usecase (Listar Modelos Disponíveis) as UC10_1
+usecase (Realizar Download) as UC10_2
+
+' ===== RELACIONAMENTOS ATORES =====
+
+Estudante --> UC01
+Estudante --> UC05
+Estudante --> UC10
+
+Empresa --> UC09
+
+Professor --> UC08
+
+Coordenacao --> UC06
+Coordenacao --> UC07
+
+Sistema --> UC02
+Sistema --> UC03
+Sistema --> UC04
+
+' ===== INCLUDES =====
+
+UC01 --> UC01_1 : <<include>>
+UC01 --> UC01_2 : <<include>>
+UC01 --> UC01_3 : <<include>>
+
+UC02 --> UC02_1 : <<include>>
+UC02 --> UC02_2 : <<include>>
+UC02 --> UC02_3 : <<include>>
+
+UC03 --> UC03_1 : <<include>>
+UC03 --> UC03_2 : <<include>>
+
+UC04 --> UC04_1 : <<include>>
+UC04 --> UC04_2 : <<include>>
+
+UC05 --> UC05_1 : <<include>>
+
+UC06 --> UC06_1 : <<include>>
+UC06 --> UC06_2 : <<include>>
+
+UC07 --> UC07_1 : <<include>>
+UC07 --> UC07_2 : <<extend>>
+UC07 --> UC07_3 : <<extend>>
+
+UC08 --> UC08_1 : <<include>>
+UC08 --> UC08_2 : <<include>>
+UC08 --> UC08_3 : <<include>>
+
+UC09 --> UC09_1 : <<include>>
+UC09 --> UC09_2 : <<include>>
+
+UC10 --> UC10_1 : <<include>>
+UC10 --> UC10_2 : <<include>>
+
+' ===== EXTENSÕES (FALHAS) =====
+
+FA01 .> UC02_1 : <<extend>>
+
+' ===== NOTAS =====
+
+note right of UC02
+  Processo central do sistema:
+  valida automaticamente com base na lei
+  e regras institucionais, sem intervenção humana.
+end note
+
+note right of UC07
+  Usado apenas quando o sistema
+  não consegue decidir automaticamente.
+end note
+
+note right of UC08
+  Avaliação acadêmica separada da validação legal.
+end note
+
+@enduml
 ---
 # Explicação
 
