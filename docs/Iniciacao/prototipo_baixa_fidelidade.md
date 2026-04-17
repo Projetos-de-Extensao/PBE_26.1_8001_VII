@@ -154,16 +154,14 @@ end note
 ### Tela Esqueceu Senha
 ### Tela do Feed
 ```puml
-
 @startuml
 title UC04 – Notificações do Processo
 
 skinparam monochrome true
 skinparam shadowing false
 
-rectangle "Notificações do Sistema" as R
 
-note right of R
+note right
 Atores:
 Sistema, Estudante
 
@@ -192,6 +190,10 @@ Regras de negócio:
 end note
 
 @enduml
+
+
+
+
 ```
 
 ### Tela Feed com configurações
