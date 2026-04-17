@@ -190,7 +190,58 @@ end note
 ---
 # Explicação
 
-## UC01 – Submeter Documentos de Estágio
+## UC00 – Realizar Login
+
+Atores: Estudante, Professor, Coordenação
+Objetivo: Permitir acesso seguro ao sistema por meio de credenciais institucionais.
+
+Pré-requisito: O usuário deve possuir cadastro ativo e credenciais válidas.
+
+Fluxo principal:
+
+O usuário acessa a tela inicial.
+Informa suas credenciais institucionais.
+O sistema valida o acesso.
+O sistema redireciona o usuário para a interface correspondente ao seu perfil.
+
+Fluxo alternativo:
+
+Credenciais inválidas → o sistema exibe mensagem de erro e solicita nova tentativa.
+
+Pós-requisito: Usuário autenticado no sistema.
+
+Regras de negócio:
+
+O acesso deve ser restrito a usuários autorizados.
+A autenticação deve usar e-mail ou credenciais institucionais válidas.
+
+---
+
+## UC01 – Abrir Solicitação de Estágio
+
+Ator: Estudante
+Objetivo: Permitir a abertura de uma nova solicitação de validação de estágio.
+
+Pré-requisito: Estudante autenticado.
+
+Fluxo principal:
+
+O estudante acessa a área de solicitações.
+Seleciona o curso.
+Seleciona o tipo de solicitação.
+O sistema gera o checklist inicial de documentos exigidos.
+A solicitação é registrada.
+
+Pós-requisito: Solicitação ativa criada no sistema.
+
+Regras de negócio:
+
+Cada solicitação deve estar vinculada ao estudante responsável.
+O checklist inicial deve respeitar as regras do curso e da instituição.
+
+---
+
+## UC02 – Submeter Documentos de Estágio
 
 Ator: Estudante
 Objetivo: Permitir o envio estruturado dos documentos obrigatórios para validação.
@@ -201,227 +252,248 @@ Fluxo principal:
 
 O estudante acessa a área de submissão.
 Seleciona o tipo de documento.
-Realiza o upload.
-Preenche dados complementares.
-O sistema armazena os arquivos.
+Realiza o upload do arquivo.
+O sistema valida o formato do arquivo.
+O estudante preenche os dados complementares.
+O sistema armazena os arquivos enviados.
+O sistema encaminha a solicitação para validação automática.
 
 Fluxo alternativo:
 
-Arquivo inválido → sistema rejeita e solicita novo envio.
+Arquivo inválido → o sistema rejeita o envio e solicita novo arquivo.
+Documento incompleto → o sistema solicita o preenchimento dos dados obrigatórios.
 
-Pós-requisito: Documentos registrados no sistema.
+Pós-requisito: Documentos registrados no sistema e vinculados à solicitação.
 
 Regras de negócio:
 
-Apenas formatos PDF ou equivalentes são aceitos.
-Todos os documentos obrigatórios devem ser enviados.
+Apenas formatos aceitos pela instituição podem ser enviados.
+Todos os documentos obrigatórios devem ser submetidos.
+Cada documento deve estar associado ao tipo correspondente.
 
 ---
 
-## UC02 – Validação Automática
+## UC03 – Validar Documentos Automaticamente
 
 Ator: Sistema
-Objetivo: Validar documentos com base em regras legais e institucionais.
+Objetivo: Validar os documentos submetidos com base em regras legais e institucionais.
 
-Pré-requisito: Documentos submetidos.
+Pré-requisito: Documentos submetidos corretamente.
 
 Fluxo principal:
 
-O sistema inicia a validação.
-Aplica regras da Lei 11.788/2008.
-Aplica regras institucionais.
+O sistema inicia o processamento da solicitação.
+Aplica as regras da Lei 11.788/2008.
+Aplica as regras institucionais.
+Analisa os documentos enviados.
 Identifica inconsistências.
-Calcula o score de conformidade.
+Gera o score de conformidade.
+Registra o resultado da validação.
 
 Fluxo alternativo:
 
-Falha na leitura → sistema marca como inválido.
+Falha na leitura dos arquivos → o sistema registra erro de validação.
+Documento ilegível ou inconsistente → o sistema encaminha a solicitação para tratamento de pendências ou exceção.
 
-Pós-requisito: Resultado de validação registrado.
+Pós-requisito: Resultado da validação automática registrado no sistema.
 
 Regras de negócio:
 
-A validação deve ocorrer em até 15 segundos.
-O score deve refletir o nível de conformidade dos documentos.
+A validação deve ocorrer em tempo reduzido, preferencialmente em até 15 segundos.
+O score deve refletir o grau de conformidade da solicitação.
+A validação automática deve considerar simultaneamente regras legais e institucionais.
 
 ---
 
-## UC03 – Identificar Pendências
+## UC04 – Identificar Pendências
 
 Ator: Sistema
-Objetivo: Detectar inconsistências e gerar correções automáticas.
+Objetivo: Detectar inconsistências e orientar as correções necessárias ao estudante.
 
-Pré-requisito: Validação concluída.
-
-Fluxo principal:
-
-O sistema analisa os resultados.
-Gera lista de pendências.
-Associa cada erro a uma regra.
-Retorna ao estudante.
-
-Pós-requisito: Pendências registradas e exibidas.
-
-Regras de negócio:
-
-Cada pendência deve conter descrição clara.
-Deve indicar exatamente o documento afetado.
-
----
-
-## UC04 – Notificar Usuários
-
-Atores: Sistema, Estudante
-Objetivo: Informar eventos relevantes do processo.
-
-Pré-requisito: Existência de solicitação ativa.
+Pré-requisito: Validação automática concluída.
 
 Fluxo principal:
 
-O sistema identifica mudança de estado.
-Gera notificação.
-Envia ao estudante.
+O sistema analisa os resultados da validação.
+Gera a lista de inconsistências encontradas.
+Associa cada pendência ao documento correspondente.
+Retorna as correções necessárias ao estudante.
 
-Pós-requisito: Usuário informado.
+Pós-requisito: Pendências registradas e disponibilizadas para consulta.
 
 Regras de negócio:
 
-Notificações devem ocorrer em tempo real ou próximo disso.
+Cada pendência deve conter descrição clara e objetiva.
+Cada pendência deve indicar exatamente o documento afetado.
+As pendências devem ser apresentadas de forma compreensível ao estudante.
 
 ---
 
 ## UC05 – Consultar Status da Solicitação
 
 Ator: Estudante
-Objetivo: Permitir acompanhamento do processo.
+Objetivo: Permitir o acompanhamento do andamento da solicitação.
 
-Pré-requisito: Solicitação existente.
+Pré-requisito: Existência de solicitação registrada.
 
 Fluxo principal:
 
-O estudante acessa suas solicitações.
-O sistema exibe status:
-Em validação
-Pendente
-Validado
-Em exceção
-Exibe histórico.
+O estudante acessa a área de solicitações.
+Seleciona a solicitação desejada.
+O sistema exibe o status atual.
+O sistema exibe o histórico da solicitação.
+O sistema exibe o score de conformidade e as pendências, quando existirem.
 
-Pós-requisito: Status visualizado.
+Pós-requisito: Situação atual da solicitação visualizada pelo estudante.
 
 Regras de negócio:
 
-Histórico deve ser imutável.
+O histórico da solicitação deve ser preservado.
+O estudante só pode visualizar suas próprias solicitações.
 
 ---
 
-## UC06 – Painel Gerencial
+## UC06 – Notificar Usuários
+
+Atores: Sistema, Estudante, Coordenação
+Objetivo: Informar eventos relevantes relacionados ao processo de validação.
+
+Pré-requisito: Existência de solicitação ativa ou evento associado ao processo.
+
+Fluxo principal:
+
+O sistema identifica uma mudança de estado ou evento relevante.
+Gera a notificação correspondente.
+Encaminha a notificação ao usuário envolvido.
+O usuário visualiza a notificação.
+
+Pós-requisito: Usuário informado sobre o evento ocorrido.
+
+Regras de negócio:
+
+As notificações podem ocorrer por dashboard, e-mail ou outro canal institucional.
+As notificações devem ocorrer em tempo real ou próximo disso.
+Devem ser notificadas mudanças de status, pendências e prazos próximos.
+
+---
+
+## UC07 – Acessar Modelos de Documentos
+
+Ator: Estudante
+Objetivo: Disponibilizar os modelos oficiais exigidos pela instituição.
+
+Pré-requisito: Estudante autenticado.
+
+Fluxo principal:
+
+O estudante acessa a área de modelos.
+O sistema lista os modelos disponíveis.
+O estudante seleciona o modelo desejado.
+O sistema realiza o download do arquivo.
+
+Pós-requisito: Modelo oficial disponibilizado ao estudante.
+
+Regras de negócio:
+
+Os modelos devem estar atualizados conforme as normas institucionais.
+Somente documentos homologados pela instituição devem ser disponibilizados.
+
+---
+
+## UC08 – Visualizar Painel Gerencial
 
 Ator: Coordenação
-Objetivo: Monitorar o desempenho geral do sistema.
+Objetivo: Permitir o acompanhamento geral das solicitações de estágio.
 
 Pré-requisito: Coordenador autenticado.
 
 Fluxo principal:
 
-Acessa painel.
-Visualiza indicadores.
-Aplica filtros.
+O coordenador acessa o painel gerencial.
+O sistema exibe os indicadores principais.
+O coordenador aplica filtros de consulta.
+O sistema apresenta as solicitações por status, curso ou outro critério definido.
 
-Pós-requisito: Visão consolidada disponível.
+Pós-requisito: Visão consolidada das solicitações disponível para a coordenação.
 
 Regras de negócio:
 
-Dados devem ser atualizados em tempo real.
+Os dados do painel devem estar atualizados.
+O painel deve permitir acompanhamento de indicadores e acompanhamento por filtros.
 
 ---
 
-## UC07 – Analisar Exceções
+## UC09 – Analisar Exceções
 
 Ator: Coordenação
-Objetivo: Tratar casos que não foram resolvidos automaticamente.
+Objetivo: Tratar solicitações que não puderam ser resolvidas integralmente pela validação automática.
 
-Pré-requisito: Solicitação marcada como exceção.
+Pré-requisito: Solicitação marcada como exceção ou inconsistente.
 
 Fluxo principal:
 
-Coordenador acessa caso.
-Analisa inconsistências.
-Decide:
-Aprovar
-Solicitar ajuste
-Sistema registra decisão.
+O coordenador acessa a solicitação em exceção.
+Revisa as inconsistências apontadas pelo sistema.
+Analisa a documentação submetida.
+Decide entre aprovar a exceção, solicitar ajuste manual ou reprovar a solicitação.
+O sistema registra a decisão tomada.
+O sistema atualiza o status da solicitação.
 
-Pós-requisito: Caso resolvido manualmente.
+Pós-requisito: Solicitação excepcional tratada e registrada.
 
 Regras de negócio:
 
-Intervenção manual só ocorre em exceções.
+A intervenção manual deve ocorrer apenas em casos excepcionais.
+Toda decisão da coordenação deve ficar registrada para auditoria.
 
 ---
 
-## UC08 – Avaliar Relatório de Estágio
+## UC10 – Avaliar Relatório de Estágio
 
 Ator: Professor
-Objetivo: Avaliar desempenho acadêmico do estudante.
+Objetivo: Realizar a avaliação acadêmica do relatório de estágio.
 
-Pré-requisito: Relatório disponível.
+Pré-requisito: Relatório de estágio disponível no sistema.
 
 Fluxo principal:
 
-Professor acessa relatório.
-Realiza leitura.
-Emite parecer.
-Atribui conceito.
+O professor acessa o relatório submetido.
+Realiza a leitura do documento.
+Emite um parecer técnico.
+Atribui o conceito final ao estudante.
+O sistema registra a avaliação.
 
-Pós-requisito: Avaliação registrada.
+Pós-requisito: Avaliação acadêmica registrada no sistema.
 
 Regras de negócio:
 
-Avaliação acadêmica é independente da validação legal.
+A avaliação acadêmica deve ser separada da validação documental.
+Somente professores autorizados podem avaliar relatórios.
 
 ---
 
-## UC09 – Assinatura de Documentos
+## UC11 – Assinar Documentos
 
 Ator: Empresa Parceira
-Objetivo: Formalizar participação da empresa.
+Objetivo: Formalizar a participação da empresa no processo de estágio.
 
-Pré-requisito: Documentos válidos.
-
-Fluxo principal:
-
-Empresa acessa documento.
-Verifica dados.
-Assina digitalmente.
-Sistema registra.
-
-Pós-requisito: Documento assinado.
-
-Regras de negócio:
-
-Assinatura deve garantir autenticidade e integridade.
-
----
-
-## UC10 – Acessar Modelos de Documentos
-
-Ator: Estudante
-Objetivo: Disponibilizar templates oficiais.
-
-Pré-requisito: Usuário autenticado.
+Pré-requisito: Documento disponível para assinatura e dados do estágio previamente validados.
 
 Fluxo principal:
 
-Acessa área de modelos.
-Visualiza lista.
-Realiza download.
+A empresa acessa o documento correspondente.
+O sistema apresenta os dados do estágio.
+A empresa valida as informações apresentadas.
+A empresa confirma a assinatura.
+O sistema registra a assinatura no documento.
 
-Pós-requisito: Documento obtido.
+Pós-requisito: Documento formalizado com assinatura da empresa.
 
 Regras de negócio:
 
-Modelos devem estar sempre atualizados conforme normas institucionais.
+A assinatura deve garantir autenticidade e integridade.
+Somente representantes autorizados da empresa podem assinar os documentos.
+
 
 ---
 
