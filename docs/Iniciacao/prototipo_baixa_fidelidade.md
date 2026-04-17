@@ -14,11 +14,11 @@ Um protótipo de baixa fidelidade é uma representação visual simplificada de 
 O desenvolvimento dos protótipos de baixa fidelidade teve início com a coleta de ideias por meio de reuniões colaborativas e construção de mapas mentais, utilizando brainstorming para compreender as demandas dos usuários.
 </p>
 
-## Protótipo de alta fidelidade
+## Protótipo de baixa fidelidade
 
 ### Versão 1.0
 
-### Tela Login
+### Submeter Documentos de Estágio
 ```puml
 @startuml
 title UC01 – Submeter Documentos de Estágio
@@ -58,7 +58,7 @@ end note
 
 @enduml
 ```
-### Tela Cadastro 1
+###  Validação Automática
 
 ```puml
 @startuml
@@ -105,7 +105,7 @@ Regras:
 ```
 
 
-### Tela Cadastro 2
+### Identificar Pendências
 ```puml
 @startuml
 title UC03 – Detectar Inconsistências
@@ -151,8 +151,7 @@ end note
 
 ```
 
-### Tela Esqueceu Senha
-### Tela do Feed
+###  Notificar Usuários
 ```puml
 @startuml
 title UC04 – Notificações do Processo
@@ -196,7 +195,7 @@ end note
 
 ```
 
-### Tela Feed com configurações
+### Consultar Status da Solicitação
 ```puml
 @startuml
 title UC05 – Acompanhamento do Processo
@@ -241,7 +240,7 @@ end note
 @enduml
 ```
 
-### Tela Perfil
+###  Painel Gerencial
 ```puml
 @startuml
 title UC06 – Painel Gerencial
@@ -282,7 +281,7 @@ end note
 @enduml
 ```
 
-### Tela Cadastrar torneio 1
+###  Analisar Exceções
 ```puml
 @startuml
 title UC07 – Analisar Exceções
@@ -325,7 +324,7 @@ end note
 @enduml
 ```
 
-### Tela Cadastrar torneio 2
+### Avaliar Relatório de Estágio
 ```puml
 @startuml
 title UC08 – Avaliar Relatório de Estágio
@@ -366,7 +365,7 @@ end note
 
 @enduml
 ```
-### Tela Cadastrar torneio 3
+### Assinatura de Documentos
 ```puml
 @startuml
 title UC09 – Assinatura de Documentos
@@ -408,7 +407,7 @@ end note
 @enduml
 ```
 
-### Tela Cadastrar torneio 4
+### Acessar Modelos de Documentos
 ```puml
 @startuml
 title UC10 – Acessar Modelos de Documentos
@@ -449,13 +448,7 @@ end note
 
 @enduml
 ```
-### Tela com meus torneios
 
-[![Prototipo 12](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela de inscrição em torneio
-
-[![Prototipo 13](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
 
 <p align = "justify">
 Na primeira versão do protótipo utilizamos a ferramenta <a href="https://material.io/resources/color/#!/?view.left=0&view.right=0">Material Design Color Tool</a>  para auxiliar na criação da paleta de cores do aplicativo, definimos as cores base do aplicativo mas as cores definidas para as telas 12 e 13 ainda não foram decididas.
@@ -465,59 +458,6 @@ Na primeira versão do protótipo utilizamos a ferramenta <a href="https://mater
 
 ### Versão 1.0
 
-### Tela Login
-
-[![Prototipo 1](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastro 1
-
-[![Prototipo 2](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastro 2
-
-[![Prototipo 3](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Esqueceu Senha
-
-[![Prototipo 4](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela do Feed
-
-[![Prototipo 5](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Feed com configurações
-
-[![Prototipo 6](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Perfil
-
-[![Prototipo 7](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 1
-
-[![Prototipo 8](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 2
-
-[![Prototipo 9](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 3
-
-[![Prototipo 10](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 4
-
-[![Prototipo 11](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela com meus torneios
-
-[![Prototipo 12](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela de inscrição em torneio
-
-[![Prototipo 13](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-link para o `<a href="https://www.figma.com/">`Protótipo`</a>`
 
 ## Conclusão
 
