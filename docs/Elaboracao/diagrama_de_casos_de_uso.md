@@ -13,72 +13,96 @@ actor Estudante
 actor "Empresa Parceira" as Empresa
 actor Professor
 actor Coordenacao
-actor Sistema
 
 ' ===== CASOS PRINCIPAIS =====
 
-usecase (UC01: Submeter Documentos de Estágio) as UC01
-usecase (Selecionar Tipo de Documento) as UC01_1
-usecase (Realizar Upload) as UC01_2
-usecase (Preencher Dados Complementares) as UC01_3
+usecase (UC00: Realizar Login) as UC00
+usecase (Informar Credenciais Institucionais) as UC00_1
+usecase (Validar Acesso) as UC00_2
+usecase (Falha de Autenticação) as FA00
 
-usecase (UC02: Validação Automática) as UC02
-usecase (Validar Regras Legais) as UC02_1
-usecase (Validar Regras Institucionais) as UC02_2
-usecase (Gerar Score de Conformidade) as UC02_3
-usecase (Erro de Validação) as FA01
+usecase (UC01: Abrir Solicitação de Estágio) as UC01
+usecase (Selecionar Curso) as UC01_1
+usecase (Selecionar Tipo de Solicitação) as UC01_2
+usecase (Gerar Checklist Inicial) as UC01_3
 
-usecase (UC03: Identificar Pendências) as UC03
-usecase (Gerar Lista de Inconsistências) as UC03_1
-usecase (Retornar Correções ao Aluno) as UC03_2
+usecase (UC02: Submeter Documentos de Estágio) as UC02
+usecase (Selecionar Tipo de Documento) as UC02_1
+usecase (Realizar Upload) as UC02_2
+usecase (Preencher Dados Complementares) as UC02_3
+usecase (Validar Formato do Arquivo) as UC02_4
+usecase (Arquivo Inválido) as FA01
 
-usecase (UC04: Notificar Usuários) as UC04
-usecase (Notificar Mudança de Status) as UC04_1
-usecase (Notificar Pendências) as UC04_2
+usecase (UC03: Validar Documentos Automaticamente) as UC03
+usecase (Validar Regras Legais) as UC03_1
+usecase (Validar Regras Institucionais) as UC03_2
+usecase (Gerar Score de Conformidade) as UC03_3
+usecase (Erro de Validação) as FA02
+
+usecase (UC04: Identificar Pendências) as UC04
+usecase (Gerar Lista de Inconsistências) as UC04_1
+usecase (Associar Pendências aos Documentos) as UC04_2
+usecase (Retornar Correções ao Aluno) as UC04_3
 
 usecase (UC05: Consultar Status da Solicitação) as UC05
 usecase (Visualizar Histórico) as UC05_1
+usecase (Visualizar Score de Conformidade) as UC05_2
+usecase (Visualizar Pendências) as UC05_3
 
-usecase (UC06: Painel Gerencial) as UC06
-usecase (Visualizar Indicadores) as UC06_1
-usecase (Filtrar Solicitações) as UC06_2
+usecase (UC06: Notificar Usuários) as UC06
+usecase (Notificar Mudança de Status) as UC06_1
+usecase (Notificar Pendências) as UC06_2
+usecase (Notificar Prazo Próximo) as UC06_3
 
-usecase (UC07: Analisar Exceções) as UC07
-usecase (Revisar Solicitação Inconsistente) as UC07_1
-usecase (Aprovar Exceção) as UC07_2
-usecase (Solicitar Ajuste Manual) as UC07_3
+usecase (UC07: Acessar Modelos de Documentos) as UC07
+usecase (Listar Modelos Disponíveis) as UC07_1
+usecase (Realizar Download) as UC07_2
 
-usecase (UC08: Avaliar Relatório de Estágio) as UC08
-usecase (Ler Relatório) as UC08_1
-usecase (Emitir Parecer) as UC08_2
-usecase (Atribuir Conceito) as UC08_3
+usecase (UC08: Visualizar Painel Gerencial) as UC08
+usecase (Visualizar Indicadores) as UC08_1
+usecase (Filtrar Solicitações) as UC08_2
+usecase (Consultar Solicitações por Status) as UC08_3
 
-usecase (UC09: Assinatura de Documentos) as UC09
-usecase (Validar Dados da Empresa) as UC09_1
-usecase (Registrar Assinatura) as UC09_2
+usecase (UC09: Analisar Exceções) as UC09
+usecase (Revisar Solicitação Inconsistente) as UC09_1
+usecase (Aprovar Exceção) as UC09_2
+usecase (Solicitar Ajuste Manual) as UC09_3
+usecase (Reprovar Solicitação) as UC09_4
 
-usecase (UC10: Acessar Modelos de Documentos) as UC10
-usecase (Listar Modelos Disponíveis) as UC10_1
-usecase (Realizar Download) as UC10_2
+usecase (UC10: Avaliar Relatório de Estágio) as UC10
+usecase (Ler Relatório) as UC10_1
+usecase (Emitir Parecer) as UC10_2
+usecase (Atribuir Conceito) as UC10_3
 
-' ===== RELACIONAMENTOS ATORES =====
+usecase (UC11: Assinar Documentos) as UC11
+usecase (Validar Dados da Empresa) as UC11_1
+usecase (Confirmar Informações do Estágio) as UC11_2
+usecase (Registrar Assinatura) as UC11_3
 
+' ===== RELACIONAMENTOS DOS ATORES =====
+
+Estudante --> UC00
 Estudante --> UC01
+Estudante --> UC02
 Estudante --> UC05
-Estudante --> UC10
+Estudante --> UC06
+Estudante --> UC07
 
-Empresa --> UC09
+Professor --> UC00
+Professor --> UC10
 
-Professor --> UC08
-
+Coordenacao --> UC00
 Coordenacao --> UC06
-Coordenacao --> UC07
+Coordenacao --> UC08
+Coordenacao --> UC09
 
-Sistema --> UC02
-Sistema --> UC03
-Sistema --> UC04
+Empresa --> UC11
 
-' ===== INCLUDES =====
+' ===== RELAÇÕES ENTRE CASOS =====
+
+UC00 --> UC00_1 : <<include>>
+UC00 --> UC00_2 : <<include>>
+FA00 .> UC00_2 : <<extend>>
 
 UC01 --> UC01_1 : <<include>>
 UC01 --> UC01_2 : <<include>>
@@ -87,51 +111,78 @@ UC01 --> UC01_3 : <<include>>
 UC02 --> UC02_1 : <<include>>
 UC02 --> UC02_2 : <<include>>
 UC02 --> UC02_3 : <<include>>
+UC02 --> UC02_4 : <<include>>
+FA01 .> UC02_4 : <<extend>>
+
+UC02 .> UC03 : <<include>>
 
 UC03 --> UC03_1 : <<include>>
 UC03 --> UC03_2 : <<include>>
+UC03 --> UC03_3 : <<include>>
+FA02 .> UC03_1 : <<extend>>
+
+UC03 .> UC04 : <<extend>>
+UC03 .> UC06 : <<extend>>
 
 UC04 --> UC04_1 : <<include>>
 UC04 --> UC04_2 : <<include>>
+UC04 --> UC04_3 : <<include>>
+UC04 .> UC06 : <<include>>
 
 UC05 --> UC05_1 : <<include>>
+UC05 --> UC05_2 : <<include>>
+UC05 --> UC05_3 : <<include>>
 
 UC06 --> UC06_1 : <<include>>
 UC06 --> UC06_2 : <<include>>
+UC06 --> UC06_3 : <<include>>
 
 UC07 --> UC07_1 : <<include>>
-UC07 --> UC07_2 : <<extend>>
-UC07 --> UC07_3 : <<extend>>
+UC07 --> UC07_2 : <<include>>
 
 UC08 --> UC08_1 : <<include>>
 UC08 --> UC08_2 : <<include>>
 UC08 --> UC08_3 : <<include>>
 
 UC09 --> UC09_1 : <<include>>
-UC09 --> UC09_2 : <<include>>
+UC09 --> UC09_2 : <<extend>>
+UC09 --> UC09_3 : <<extend>>
+UC09 --> UC09_4 : <<extend>>
+UC09 .> UC06 : <<include>>
 
 UC10 --> UC10_1 : <<include>>
 UC10 --> UC10_2 : <<include>>
+UC10 --> UC10_3 : <<include>>
 
-' ===== EXTENSÕES (FALHAS) =====
-
-FA01 .> UC02_1 : <<extend>>
+UC11 --> UC11_1 : <<include>>
+UC11 --> UC11_2 : <<include>>
+UC11 --> UC11_3 : <<include>>
+UC11 .> UC06 : <<include>>
 
 ' ===== NOTAS =====
 
-note right of UC02
-  Processo central do sistema:
-  valida automaticamente com base na lei
-  e regras institucionais, sem intervenção humana.
+note right of UC03
+  Processo central do sistema.
+  A validação ocorre automaticamente
+  com base na Lei 11.788/2008
+  e nas regras institucionais.
 end note
 
-note right of UC07
-  Usado apenas quando o sistema
-  não consegue decidir automaticamente.
+note right of UC09
+  A coordenação atua apenas
+  quando o sistema identifica
+  casos excepcionais ou inconsistentes.
 end note
 
-note right of UC08
-  Avaliação acadêmica separada da validação legal.
+note right of UC10
+  A avaliação acadêmica do professor
+  é separada da validação documental.
+end note
+
+note bottom of UC06
+  As notificações podem ocorrer
+  por dashboard, e-mail ou outro
+  canal institucional definido.
 end note
 
 @enduml
