@@ -11,7 +11,7 @@ Um protótipo de baixa fidelidade é uma representação visual simplificada de 
 ## Metodologia
 
 <p align = "justify">
-Iniciamos o projeto através dos levantamentos iniciais da equipe, após discussões a ferramenta Figma foi selecionada para produzir o protótipo de alta fidelidade com auxílio do Material Design Color Tool.
+O desenvolvimento dos protótipos de baixa fidelidade teve início com a coleta de ideias por meio de reuniões colaborativas e construção de mapas mentais, utilizando brainstorming para compreender as demandas dos usuários.
 </p>
 
 ## Protótipo de alta fidelidade
