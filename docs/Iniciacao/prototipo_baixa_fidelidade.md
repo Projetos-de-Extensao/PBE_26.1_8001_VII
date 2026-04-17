@@ -240,7 +240,7 @@ end note
 ```
 
 ### Tela Perfil
-
+```puml
 @startuml
 skinparam backgroundColor white
 skinparam defaultFontName Arial
@@ -292,6 +292,7 @@ dados atualizados em tempo real.
 end note
 
 @enduml
+```
 
 ### Tela Cadastrar torneio 1
 
