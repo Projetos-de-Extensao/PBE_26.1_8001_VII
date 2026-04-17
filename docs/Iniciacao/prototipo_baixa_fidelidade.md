@@ -295,21 +295,200 @@ end note
 ```
 
 ### Tela Cadastrar torneio 1
+```puml
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam handwritten false
 
-[![Prototipo 8](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam rectangle {
+  BackgroundColor #EDEDED
+  BorderColor black
+  FontColor black
+  RoundCorner 0
+}
+
+title Protótipo de Baixa Fidelidade - Tratamento Manual de Exceções
+
+rectangle "Tratamento de Casos em Exceção" as painel {
+
+  rectangle "Coordenação" as usuario
+
+  rectangle "Caso:\nDigite o identificador __________________" as caso
+  rectangle "Status:\nExceção" as status
+  rectangle "Inconsistências:\n__________________________________\n__________________________________" as inconsistencias
+
+  rectangle "   Analisar Caso   " as analisar
+
+  rectangle "Decisão:\n( ) Aprovar\n( ) Solicitar ajuste" as decisao
+
+  rectangle "   Registrar Decisão   " as registrar
+
+  rectangle "Resultado:\nCaso resolvido manualmente" as resultado
+}
+
+usuario -[hidden]down- caso
+caso -[hidden]down- status
+status -[hidden]down- inconsistencias
+inconsistencias -[hidden]down- analisar
+analisar -[hidden]down- decisao
+decisao -[hidden]down- registrar
+registrar -[hidden]down- resultado
+
+note right of status
+Intervenção manual
+só ocorre em exceções.
+end note
+
+@enduml
+```
 
 ### Tela Cadastrar torneio 2
+```puml
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam handwritten false
 
-[![Prototipo 9](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam rectangle {
+  BackgroundColor #EDEDED
+  BorderColor black
+  FontColor black
+  RoundCorner 0
+}
 
+title Protótipo de Baixa Fidelidade - Avaliação Acadêmica
+
+rectangle "Avaliação de Desempenho Acadêmico" as painel {
+
+  rectangle "Professor" as usuario
+
+  rectangle "Relatório:\nDigite o identificador __________________" as relatorio
+
+  rectangle "Conteúdo do Relatório:\n__________________________________\n__________________________________\n__________________________________" as leitura
+
+  rectangle "   Realizar Leitura   " as leitura_botao
+
+  rectangle "Parecer:\n__________________________________\n__________________________________" as parecer
+
+  rectangle "Conceito:\n( ) Excelente\n( ) Bom\n( ) Regular\n( ) Insuficiente" as conceito
+
+  rectangle "   Registrar Avaliação   " as registrar
+
+  rectangle "Resultado:\nAvaliação registrada" as resultado
+}
+
+usuario -[hidden]down- relatorio
+relatorio -[hidden]down- leitura
+leitura -[hidden]down- leitura_botao
+leitura_botao -[hidden]down- parecer
+parecer -[hidden]down- conceito
+conceito -[hidden]down- registrar
+registrar -[hidden]down- resultado
+
+note right of relatorio
+Pré-requisito:
+Relatório disponível.
+end note
+
+note right of conceito
+Regra de negócio:
+Avaliação acadêmica é independente
+da validação legal.
+end note
+
+@enduml
+```
 ### Tela Cadastrar torneio 3
+```puml
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam handwritten false
 
-[![Prototipo 10](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam rectangle {
+  BackgroundColor #EDEDED
+  BorderColor black
+  FontColor black
+  RoundCorner 0
+}
+
+title Protótipo de Baixa Fidelidade - Assinatura de Documento
+
+rectangle "Formalização de Participação da Empresa" as painel {
+
+  rectangle "Empresa Parceira" as usuario
+
+  rectangle "Documento:\nDigite o identificador __________________" as documento
+
+  rectangle "Dados do Documento:\n__________________________________\n__________________________________\n__________________________________" as dados
+
+  rectangle "   Verificar Dados   " as verificar
+
+  rectangle "Assinatura Digital:\n[ Assinar documento ]" as assinatura
+
+  rectangle "   Registrar Assinatura   " as registrar
+
+  rectangle "Resultado:\nDocumento assinado" as resultado
+}
+
+usuario -[hidden]down- documento
+documento -[hidden]down- dados
+dados -[hidden]down- verificar
+verificar -[hidden]down- assinatura
+assinatura -[hidden]down- registrar
+registrar -[hidden]down- resultado
+
+
+
+@enduml
+```
 
 ### Tela Cadastrar torneio 4
+```puml
+@startuml
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam handwritten false
 
-[![Prototipo 11](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+skinparam rectangle {
+  BackgroundColor #EDEDED
+  BorderColor black
+  FontColor black
+  RoundCorner 0
+}
 
+title Protótipo de Baixa Fidelidade - Download de Templates Oficiais
+
+rectangle "Área de Modelos Oficiais" as painel {
+
+  rectangle "Estudante (Autenticado)" as usuario
+
+  rectangle "Pesquisar modelo:\nDigite o nome __________________" as pesquisa
+
+  rectangle "Lista de Modelos Disponíveis:\n__________________________________\n__________________________________\n__________________________________" as lista
+
+  rectangle "   Visualizar Modelo   " as visualizar
+
+  rectangle "   Realizar Download   " as download
+
+  rectangle "Resultado:\nDocumento obtido com sucesso" as resultado
+}
+
+usuario -[hidden]down- pesquisa
+pesquisa -[hidden]down- lista
+lista -[hidden]down- visualizar
+visualizar -[hidden]down- download
+download -[hidden]down- resultado
+
+
+
+@enduml
+```
 ### Tela com meus torneios
 
 [![Prototipo 12](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
