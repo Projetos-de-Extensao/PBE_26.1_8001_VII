@@ -244,53 +244,39 @@ end note
 ### Tela Perfil
 ```puml
 @startuml
-skinparam backgroundColor white
-skinparam defaultFontName Arial
+title UC06 – Painel Gerencial
+
+skinparam monochrome true
 skinparam shadowing false
-skinparam handwritten false
 
-skinparam rectangle {
-  BackgroundColor #EDEDED
-  BorderColor black
-  FontColor black
-  RoundCorner 0
-}
 
-title Protótipo de Baixa Fidelidade - Painel de Monitoramento
+note right of R
+Ator:
+Coordenação
 
-rectangle "Painel de Monitoramento" as painel {
+Objetivo:
+Monitorar o desempenho geral do sistema
 
-  rectangle "Coordenação" as usuario
+Pré-requisito:
+Coordenador autenticado
 
-  rectangle "Período:\n____________________" as filtro1
-  rectangle "Unidade/Setor:\n____________________" as filtro2
-  rectangle "Status:\n____________________" as filtro3
+----------------------------------------
 
-  rectangle "   Aplicar Filtros   " as botao
+Fluxo principal:
+- O coordenador acessa o painel
+- O sistema exibe indicadores de desempenho
+- O coordenador aplica filtros
+- O sistema atualiza os indicadores conforme filtros aplicados
 
-  rectangle "Indicador 1:\nDisponibilidade\n____________________" as ind1
-  rectangle "Indicador 2:\nTempo de resposta\n____________________" as ind2
-  rectangle "Indicador 3:\nOcorrências\n____________________" as ind3
-  rectangle "Indicador 4:\nTaxa de uso\n____________________" as ind4
+----------------------------------------
 
-  rectangle "Atualização:\nTempo real" as atualizacao
-  rectangle "Resultado:\nVisão consolidada disponível" as resultado
-}
+Pós-requisito:
+Visão consolidada disponível
 
-usuario -[hidden]down- filtro1
-filtro1 -[hidden]down- filtro2
-filtro2 -[hidden]down- filtro3
-filtro3 -[hidden]down- botao
-botao -[hidden]down- ind1
-ind1 -[hidden]right- ind2
-ind1 -[hidden]down- ind3
-ind3 -[hidden]right- ind4
-ind3 -[hidden]down- atualizacao
-atualizacao -[hidden]down- resultado
+----------------------------------------
 
-note right of atualizacao
-Regra de negócio:
-dados atualizados em tempo real.
+Regras de negócio:
+- Dados devem ser atualizados em tempo real
 end note
 
 @enduml
@@ -299,48 +285,41 @@ end note
 ### Tela Cadastrar torneio 1
 ```puml
 @startuml
-skinparam backgroundColor white
-skinparam defaultFontName Arial
+title UC07 – Analisar Exceções
+
+skinparam monochrome true
 skinparam shadowing false
-skinparam handwritten false
 
-skinparam rectangle {
-  BackgroundColor #EDEDED
-  BorderColor black
-  FontColor black
-  RoundCorner 0
-}
 
-title Protótipo de Baixa Fidelidade - Tratamento Manual de Exceções
+note right of R
+Ator:
+Coordenação
 
-rectangle "Tratamento de Casos em Exceção" as painel {
+Objetivo:
+Tratar casos que não foram resolvidos automaticamente
 
-  rectangle "Coordenação" as usuario
+Pré-requisito:
+Solicitação marcada como exceção
 
-  rectangle "Caso:\nDigite o identificador __________________" as caso
-  rectangle "Status:\nExceção" as status
-  rectangle "Inconsistências:\n__________________________________\n__________________________________" as inconsistencias
+----------------------------------------
 
-  rectangle "   Analisar Caso   " as analisar
+Fluxo principal:
+- O coordenador acessa o caso em exceção
+- Analisa inconsistências identificadas
+- Decide entre:
+  • Aprovar
+  • Solicitar ajuste
+- O sistema registra a decisão tomada
 
-  rectangle "Decisão:\n( ) Aprovar\n( ) Solicitar ajuste" as decisao
+----------------------------------------
 
-  rectangle "   Registrar Decisão   " as registrar
+Pós-requisito:
+Caso resolvido manualmente
 
-  rectangle "Resultado:\nCaso resolvido manualmente" as resultado
-}
+----------------------------------------
 
-usuario -[hidden]down- caso
-caso -[hidden]down- status
-status -[hidden]down- inconsistencias
-inconsistencias -[hidden]down- analisar
-analisar -[hidden]down- decisao
-decisao -[hidden]down- registrar
-registrar -[hidden]down- resultado
-
-note right of status
-Intervenção manual
-só ocorre em exceções.
+Regras de negócio:
+- Intervenção manual só ocorre em exceções
 end note
 
 @enduml
@@ -349,56 +328,40 @@ end note
 ### Tela Cadastrar torneio 2
 ```puml
 @startuml
-skinparam backgroundColor white
-skinparam defaultFontName Arial
+title UC08 – Avaliar Relatório de Estágio
+
+skinparam monochrome true
 skinparam shadowing false
-skinparam handwritten false
 
-skinparam rectangle {
-  BackgroundColor #EDEDED
-  BorderColor black
-  FontColor black
-  RoundCorner 0
-}
 
-title Protótipo de Baixa Fidelidade - Avaliação Acadêmica
+note right of R
+Ator:
+Professor
 
-rectangle "Avaliação de Desempenho Acadêmico" as painel {
+Objetivo:
+Avaliar desempenho acadêmico do estudante
 
-  rectangle "Professor" as usuario
-
-  rectangle "Relatório:\nDigite o identificador __________________" as relatorio
-
-  rectangle "Conteúdo do Relatório:\n__________________________________\n__________________________________\n__________________________________" as leitura
-
-  rectangle "   Realizar Leitura   " as leitura_botao
-
-  rectangle "Parecer:\n__________________________________\n__________________________________" as parecer
-
-  rectangle "Conceito:\n( ) Excelente\n( ) Bom\n( ) Regular\n( ) Insuficiente" as conceito
-
-  rectangle "   Registrar Avaliação   " as registrar
-
-  rectangle "Resultado:\nAvaliação registrada" as resultado
-}
-
-usuario -[hidden]down- relatorio
-relatorio -[hidden]down- leitura
-leitura -[hidden]down- leitura_botao
-leitura_botao -[hidden]down- parecer
-parecer -[hidden]down- conceito
-conceito -[hidden]down- registrar
-registrar -[hidden]down- resultado
-
-note right of relatorio
 Pré-requisito:
-Relatório disponível.
-end note
+Relatório disponível
 
-note right of conceito
-Regra de negócio:
-Avaliação acadêmica é independente
-da validação legal.
+----------------------------------------
+
+Fluxo principal:
+- O professor acessa o relatório do estudante
+- Realiza leitura do conteúdo
+- Emite parecer acadêmico
+- Atribui conceito ao estudante
+- O sistema registra a avaliação
+
+----------------------------------------
+
+Pós-requisito:
+Avaliação registrada
+
+----------------------------------------
+
+Regras de negócio:
+- Avaliação acadêmica é independente da validação legal
 end note
 
 @enduml
@@ -406,45 +369,41 @@ end note
 ### Tela Cadastrar torneio 3
 ```puml
 @startuml
-skinparam backgroundColor white
-skinparam defaultFontName Arial
+title UC09 – Assinatura de Documentos
+
+skinparam monochrome true
 skinparam shadowing false
-skinparam handwritten false
-
-skinparam rectangle {
-  BackgroundColor #EDEDED
-  BorderColor black
-  FontColor black
-  RoundCorner 0
-}
-
-title Protótipo de Baixa Fidelidade - Assinatura de Documento
-
-rectangle "Formalização de Participação da Empresa" as painel {
-
-  rectangle "Empresa Parceira" as usuario
-
-  rectangle "Documento:\nDigite o identificador __________________" as documento
-
-  rectangle "Dados do Documento:\n__________________________________\n__________________________________\n__________________________________" as dados
-
-  rectangle "   Verificar Dados   " as verificar
-
-  rectangle "Assinatura Digital:\n[ Assinar documento ]" as assinatura
-
-  rectangle "   Registrar Assinatura   " as registrar
-
-  rectangle "Resultado:\nDocumento assinado" as resultado
-}
-
-usuario -[hidden]down- documento
-documento -[hidden]down- dados
-dados -[hidden]down- verificar
-verificar -[hidden]down- assinatura
-assinatura -[hidden]down- registrar
-registrar -[hidden]down- resultado
 
 
+
+note right of R
+Ator:
+Empresa Parceira
+
+Objetivo:
+Formalizar participação da empresa
+
+Pré-requisito:
+Documentos válidos
+
+----------------------------------------
+
+Fluxo principal:
+- A empresa acessa o documento disponibilizado
+- Verifica os dados apresentados
+- Realiza assinatura digital
+- O sistema registra a assinatura
+
+----------------------------------------
+
+Pós-requisito:
+Documento assinado
+
+----------------------------------------
+
+Regras de negócio:
+- Assinatura deve garantir autenticidade e integridade
+end note
 
 @enduml
 ```
@@ -452,42 +411,41 @@ registrar -[hidden]down- resultado
 ### Tela Cadastrar torneio 4
 ```puml
 @startuml
-skinparam backgroundColor white
-skinparam defaultFontName Arial
+title UC10 – Acessar Modelos de Documentos
+
+skinparam monochrome true
 skinparam shadowing false
-skinparam handwritten false
-
-skinparam rectangle {
-  BackgroundColor #EDEDED
-  BorderColor black
-  FontColor black
-  RoundCorner 0
-}
-
-title Protótipo de Baixa Fidelidade - Download de Templates Oficiais
-
-rectangle "Área de Modelos Oficiais" as painel {
-
-  rectangle "Estudante (Autenticado)" as usuario
-
-  rectangle "Pesquisar modelo:\nDigite o nome __________________" as pesquisa
-
-  rectangle "Lista de Modelos Disponíveis:\n__________________________________\n__________________________________\n__________________________________" as lista
-
-  rectangle "   Visualizar Modelo   " as visualizar
-
-  rectangle "   Realizar Download   " as download
-
-  rectangle "Resultado:\nDocumento obtido com sucesso" as resultado
-}
-
-usuario -[hidden]down- pesquisa
-pesquisa -[hidden]down- lista
-lista -[hidden]down- visualizar
-visualizar -[hidden]down- download
-download -[hidden]down- resultado
 
 
+
+note right of R
+Ator:
+Estudante
+
+Objetivo:
+Disponibilizar templates oficiais
+
+Pré-requisito:
+Usuário autenticado
+
+----------------------------------------
+
+Fluxo principal:
+- O estudante acessa a área de modelos
+- O sistema exibe lista de templates disponíveis
+- O estudante visualiza os modelos disponíveis
+- Realiza download do documento desejado
+
+----------------------------------------
+
+Pós-requisito:
+Documento obtido
+
+----------------------------------------
+
+Regras de negócio:
+- Modelos devem estar sempre atualizados conforme normas institucionais
+end note
 
 @enduml
 ```
