@@ -16,12 +16,12 @@ O desenvolvimento dos protótipos de baixa fidelidade teve início com a coleta 
 
 ## Protótipo de baixa fidelidade
 
-### Versão 1.0
+
 
 ### Submeter Documentos de Estágio
 ```puml
 @startuml
-title UC01 – Submeter Documentos de Estágio
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -62,7 +62,6 @@ end note
 
 ```puml
 @startuml
-title UC02 – Validar Documentos
 
 skinparam monochrome true
 skinparam shadowing false
@@ -108,7 +107,7 @@ Regras:
 ### Identificar Pendências
 ```puml
 @startuml
-title UC03 – Detectar Inconsistências
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -154,7 +153,7 @@ end note
 ###  Notificar Usuários
 ```puml
 @startuml
-title UC04 – Notificações do Processo
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -198,7 +197,7 @@ end note
 ### Consultar Status da Solicitação
 ```puml
 @startuml
-title UC05 – Acompanhamento do Processo
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -243,7 +242,6 @@ end note
 ###  Painel Gerencial
 ```puml
 @startuml
-title UC06 – Painel Gerencial
 
 skinparam monochrome true
 skinparam shadowing false
@@ -284,7 +282,7 @@ end note
 ###  Analisar Exceções
 ```puml
 @startuml
-title UC07 – Analisar Exceções
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -327,7 +325,7 @@ end note
 ### Avaliar Relatório de Estágio
 ```puml
 @startuml
-title UC08 – Avaliar Relatório de Estágio
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -368,7 +366,7 @@ end note
 ### Assinatura de Documentos
 ```puml
 @startuml
-title UC09 – Assinatura de Documentos
+
 
 skinparam monochrome true
 skinparam shadowing false
@@ -410,7 +408,7 @@ end note
 ### Acessar Modelos de Documentos
 ```puml
 @startuml
-title UC10 – Acessar Modelos de Documentos
+
 
 skinparam monochrome true
 skinparam shadowing false
