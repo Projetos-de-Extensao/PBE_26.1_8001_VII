@@ -365,4 +365,4 @@ A construção dos protótipos de baixa fidelidade permitiu visualizar de forma 
 
 | Data     | Versão | Descrição                            | Autor(es)                                                                            |
 | -------- | ------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
-| 15/04/26 | 1.0     | Criação do Prototipo               |   Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria e Matheus Alvarenga                                              |
+| 16/04/26 | 1.0     | Criação do Prototipo               |   Gabriel Barreto, Guilherme Braz, Ísis Tavares, Mariana Faria e Matheus Alvarenga                                              |
