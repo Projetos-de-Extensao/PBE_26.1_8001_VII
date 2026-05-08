@@ -231,8 +231,8 @@ Notificacao "0..*" --> "1" Usuario : destinatário >
 
 ##Mapeamento das Classes do Sistema
 
+```plantuml
 @startuml
-{+
 abstract class Usuario {
 	+ id: Long
 	+ nome: String
@@ -446,9 +446,9 @@ Usuario "1" -- "0..*" Assinatura : realiza >
 Documento "1" -- "0..*" Assinatura : possui >
 Documento "0..*" -- "1" ModeloDocumento : segue >
 Notificacao "0..*" -- "1" Usuario : notifica >
-}
-@enduml
 
+@enduml
+```
 
 
 ## Descrição das Classes
