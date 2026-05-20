@@ -45,3 +45,7 @@ node_modules/
 # Environment variables
 .env
 .env.local
+
+# Configurações do Django Local
+__pycache__/
+*.sqlite3
