@@ -67,33 +67,20 @@ class Usuario {
   - emailInstitucional: String
   - senha: String
   - ativo: Boolean
-  + autenticar(): Boolean
-  + logout(): void
-  + atualizarDados(): void
 }
 
 class Estudante {
   - matricula: String
   - curso: String
   - periodo: int
-  + abrirSolicitacao(): void
-  + submeterDocumento(): void
-  + consultarStatus(): void
-  + visualizarPendencias(): void
 }
 
 class Professor {
   - areaAtuacao: String
-  + avaliarRelatorio(): void
-  + emitirParecer(): void
-  + atribuirConceito(): void
 }
 
 class Coordenador {
   - setor: String
-  + visualizarPainel(): void
-  + analisarExcecao(): void
-  + registrarDecisao(): void
 }
 
 class EmpresaParceira {
@@ -101,8 +88,6 @@ class EmpresaParceira {
   - razaoSocial: String
   - cnpj: String
   - responsavelLegal: String
-  + confirmarDados(): void
-  + assinarDocumento(): void
 }
 
 class SolicitacaoEstagio {
@@ -110,10 +95,6 @@ class SolicitacaoEstagio {
   - dataAbertura: Date
   - status: StatusSolicitacao
   - scoreConformidade: double
-  + registrarSubmissao(): void
-  + atualizarStatus(): void
-  + calcularScore(): double
-  + listarPendencias(): List<Pendencia>
 }
 
 class Documento {
@@ -122,330 +103,39 @@ class Documento {
   - tipo: TipoDocumento
   - dataEnvio: Date
   - status: StatusDocumento
-  - caminhoArquivo: String
-  + validarFormato(): Boolean
-  + armazenar(): void
-  + atualizarStatus(): void
 }
 
-class ValidacaoAutomatica {
-  - id: Long
-  - dataProcessamento: Date
-  - tempoProcessamentoSeg: int
-  - regrasAplicadas: String
-  - resultado: String
-  + validarLeiEstagio(): void
-  + validarRegrasInstitucionais(): void
-  + gerarScore(): double
-  + detectarPendencias(): List<Pendencia>
-}
-
-class Pendencia {
-  - id: Long
-  - tipo: TipoPendencia
-  - descricao: String
-  - obrigatoria: Boolean
-  - resolvida: Boolean
-  + gerarDescricao(): void
-  + marcarResolvida(): void
-}
-
-class Notificacao {
-  - id: Long
-  - tipo: TipoNotificacao
-  - mensagem: String
-  - dataEnvio: Date
-  - lida: Boolean
-  + enviar(): void
-  + marcarComoLida(): void
-}
-
-class ModeloDocumento {
-  - id: Long
-  - nome: String
-  - tipo: TipoDocumento
-  - versao: String
-  - arquivoModelo: String
-  + disponibilizarDownload(): void
-  + atualizarVersao(): void
-}
-
-class Assinatura {
-  - id: Long
-  - dataAssinatura: Date
-  - nomeAssinante: String
-  - cargoAssinante: String
-  - hashValidacao: String
-  + registrar(): void
-  + validarIntegridade(): Boolean
-}
-
-class RelatorioEstagio {
-  - id: Long
-  - titulo: String
-  - periodoReferencia: String
-  - parecer: String
-  - conceito: String
-  + registrarParecer(): void
-  + atribuirConceito(): void
-}
-
-class AnaliseExcecao {
-  - id: Long
-  - motivo: String
-  - decisao: DecisaoCoordenacao
-  - observacao: String
-  - dataAnalise: Date
-  + registrarAnalise(): void
-  + aprovarExcecao(): void
-  + solicitarAjuste(): void
-  + reprovar(): void
-}
+class ValidacaoAutomatica
+class Pendencia
+class Notificacao
+class ModeloDocumento
+class Assinatura
+class RelatorioEstagio
+class AnaliseExcecao
 
 Usuario <|-- Estudante
 Usuario <|-- Professor
 Usuario <|-- Coordenador
 
-Estudante "1" --> "0..*" SolicitacaoEstagio : realiza >
-SolicitacaoEstagio "1" *-- "1..*" Documento : contém >
-SolicitacaoEstagio "1" *-- "0..*" Pendencia : gera >
-SolicitacaoEstagio "1" --> "0..*" Notificacao : dispara >
-SolicitacaoEstagio "1" --> "0..1" AnaliseExcecao : pode gerar >
-SolicitacaoEstagio "1" --> "0..1" RelatorioEstagio : inclui >
+Estudante "1" --> "0..*" SolicitacaoEstagio : realiza
+SolicitacaoEstagio "1" *-- "1..*" Documento : contém
+SolicitacaoEstagio "1" *-- "0..*" Pendencia : gera
+SolicitacaoEstagio "1" --> "0..*" Notificacao : dispara
+SolicitacaoEstagio "1" --> "0..1" AnaliseExcecao : pode gerar
+SolicitacaoEstagio "1" --> "0..1" RelatorioEstagio : inclui
 
-ValidacaoAutomatica "1" --> "1" SolicitacaoEstagio : processa >
-ValidacaoAutomatica "1" --> "1..*" Documento : analisa >
+ValidacaoAutomatica "1" --> "1" SolicitacaoEstagio : processa
+ValidacaoAutomatica "1" --> "1..*" Documento : analisa
 
-Professor "1" --> "0..*" RelatorioEstagio : avalia >
-Coordenador "1" --> "0..*" AnaliseExcecao : decide >
-EmpresaParceira "1" --> "0..*" Assinatura : realiza >
+Professor "1" --> "0..*" RelatorioEstagio : avalia
+Coordenador "1" --> "0..*" AnaliseExcecao : decide
+EmpresaParceira "1" --> "0..*" Assinatura : realiza
 
-Documento "1" --> "0..*" Assinatura : pode conter >
-Documento "0..*" --> "1" ModeloDocumento : segue >
+Documento "1" --> "0..*" Assinatura : pode conter
+Documento "0..*" --> "1" ModeloDocumento : segue
 RelatorioEstagio --|> Documento
 
-Notificacao "0..*" --> "1" Usuario : destinatário >
-
-@enduml
-```
-
-## Mapeamento das Classes do Sistema
-
-```plantuml
-@startuml
-abstract class Usuario {
-	+ id: Long
-	+ nome: String
-	+ emailInstitucional: String
-	+ senha: String
-	+ ativo: Boolean
-	+ autenticar(): Boolean
-	+ logout(): void
-	+ atualizarDados(): void
-}
-
-class Estudante extends Usuario {
-	+ matricula: String
-	+ curso: String
-	+ periodo: int
-	+ abrirSolicitacao(): void
-	+ submeterDocumento(): void
-	+ consultarStatus(): void
-}
-
-class Professor extends Usuario {
-	+ areaAtuacao: String
-	+ avaliarRelatorio(relatorio: RelatorioEstagio): void
-	+ emitirParecer(): void
-	+ atribuirConceito(): void
-}
-
-class Coordenador extends Usuario {
-	+ setor: String
-	+ visualizarPainel(): void
-	+ analisarExcecao(analise: AnaliseExcecao): void
-	+ registrarDecisao(): void
-}
-
-class EmpresaParceira {
-	+ idEmpresa: Long
-	+ razaoSocial: String
-	+ cnpj: String
-	+ responsavelLegal: String
-	+ confirmarDados(): void
-	+ assinarDocumento(): void
-}
-
-class SolicitacaoEstagio {
-	+ id: Long
-	+ dataAbertura: Date
-	+ status: StatusSolicitacao
-	+ scoreConformidade: double
-	+ registrarSubmissao(): void
-	+ atualizarStatus(): void
-	+ calcularScore(): double
-	+ listarPendencias(): List<Pendencia>
-}
-
-abstract class Documento {
-	+ id: Long
-	+ nomeArquivo: String
-	+ tipo: TipoDocumento
-	+ dataEnvio: Date
-	+ status: StatusDocumento
-	+ caminhoArquivo: String
-	+ validarFormato(): Boolean
-	+ armazenar(): void
-	+ atualizarStatus(): void
-}
-
-class Contrato extends Documento {}
-
-class TermoCompromisso extends Documento {}
-
-class RelatorioEstagio extends Documento {
-	+ titulo: String
-	+ periodoReferencia: String
-	+ parecer: String
-	+ conceito: String
-	+ registrarParecer(): void
-	+ atribuirConceito(): void
-}
-
-class ApoliceSeguro extends Documento {}
-
-class DocumentoOutro extends Documento {}
-
-class ValidacaoAutomatica {
-	+ id: Long
-	+ dataProcessamento: Date
-	+ tempoProcessamentoSeg: int
-	+ regrasAplicadas: String
-	+ resultado: String
-	+ validarLeiEstagio(): void
-	+ validarRegrasInstitucionais(): void
-	+ gerarScore(): double
-	+ detectarPendencias(): List<Pendencia>
-}
-
-class Pendencia {
-	+ id: Long
-	+ tipo: TipoPendencia
-	+ descricao: String
-	+ obrigatoria: Boolean
-	+ resolvida: Boolean
-	+ gerarDescricao(): void
-	+ marcarResolvida(): void
-}
-
-class Notificacao {
-	+ id: Long
-	+ tipo: TipoNotificacao
-	+ mensagem: String
-	+ dataEnvio: Date
-	+ lida: Boolean
-	+ enviar(usuario: Usuario): void
-	+ marcarComoLida(): void
-}
-
-class ModeloDocumento {
-	+ id: Long
-	+ nome: String
-	+ tipo: TipoDocumento
-	+ versao: String
-	+ arquivoModelo: String
-	+ disponibilizarDownload(): void
-	+ atualizarVersao(): void
-}
-
-class Assinatura {
-	+ id: Long
-	+ dataAssinatura: Date
-	+ nomeAssinante: String
-	+ cargoAssinante: String
-	+ hashValidacao: String
-	+ registrar(): void
-	+ validarIntegridade(): Boolean
-}
-
-class AnaliseExcecao {
-	+ id: Long
-	+ motivo: String
-	+ decisao: DecisaoCoordenacao
-	+ observacao: String
-	+ dataAnalise: Date
-	+ registrarAnalise(): void
-	+ aprovarExcecao(): void
-	+ solicitarAjuste(): void
-	+ reprovar(): void
-}
-
-enum StatusSolicitacao {
-	EM_PREENCHIMENTO
-	SUBMETIDA
-	EM_VALIDACAO
-	COM_PENDENCIAS
-	EM_ANALISE_EXCECAO
-	APROVADA
-	REPROVADA
-}
-
-enum TipoDocumento {
-	CONTRATO
-	TERMO_COMPROMISSO
-	RELATORIO_PARCIAL
-	RELATORIO_FINAL
-	APOLICE_SEGURO
-	OUTRO
-}
-
-enum StatusDocumento {
-	ENVIADO
-	VALIDADO
-	COM_PENDENCIA
-	REJEITADO
-	ASSINADO
-}
-
-enum TipoNotificacao {
-	STATUS_ALTERADO
-	PENDENCIA_IDENTIFICADA
-	PRAZO_PROXIMO
-	DOCUMENTO_ASSINADO
-}
-
-enum TipoPendencia {
-	DADO_AUSENTE
-	ASSINATURA_FALTANTE
-	DOCUMENTO_INVALIDO
-	INCONSISTENCIA_LEGAL
-	INCONSISTENCIA_INSTITUCIONAL
-}
-
-enum DecisaoCoordenacao {
-	APROVAR_EXCECAO
-	SOLICITAR_AJUSTE
-	REPROVAR
-}
-
-Estudante "1" -- "0..*" SolicitacaoEstagio : cria >
-SolicitacaoEstagio "1" *-- "1..*" Documento : contém >
-SolicitacaoEstagio "1" *-- "0..*" Pendencia : gera >
-SolicitacaoEstagio "1" -- "0..*" Notificacao : dispara >
-SolicitacaoEstagio "1" -- "0..1" AnaliseExcecao : pode gerar >
-
-ValidacaoAutomatica "1" -- "1" SolicitacaoEstagio : processa >
-ValidacaoAutomatica "1" -- "1..*" Documento : analisa >
-
-Professor "1" -- "0..*" RelatorioEstagio : avalia >
-Coordenador "1" -- "0..*" AnaliseExcecao : decide >
-
-EmpresaParceira "1" -- "0..*" Assinatura : realiza >
-Usuario "1" -- "0..*" Assinatura : realiza >
-
-Documento "1" -- "0..*" Assinatura : possui >
-Documento "0..*" -- "1" ModeloDocumento : segue >
-Notificacao "0..*" -- "1" Usuario : notifica >
+Notificacao "0..*" --> "1" Usuario : destinatário
 
 @enduml
 ```
