@@ -141,6 +141,143 @@ Notificacao "0..*" --> "1" Usuario : destinatário
 ```
 
 
+## Visão Geral
+
+O diagrama de classes do Sistema de Validação de Estágios representa a estrutura estática do sistema, descrevendo as entidades, seus atributos, métodos e relacionamentos. O modelo foi desenvolvido para apoiar o gerenciamento do processo de estágio, incluindo submissão de documentos, validação automática, análise de pendências e acompanhamento do status da solicitação.
+
+## Estrutura do Sistema
+
+O sistema possui três tipos principais de usuários: estudante, professor e coordenador, todos derivados da classe `Usuario`. O estudante é responsável pela abertura da solicitação de estágio e envio de documentos, o professor realiza a avaliação dos relatórios e o coordenador conduz análises de exceção e decisões administrativas.
+
+A classe central do sistema é `SolicitacaoEstagio`, responsável por armazenar informações do processo, status da solicitação, score de conformidade e relacionamentos com documentos, pendências e notificações.
+
+### Principais Classes
+
+#### Usuario
+Classe base responsável pela autenticação e gerenciamento dos usuários do sistema.
+
+**Atributos principais:**
+- id
+- nome
+- emailInstitucional
+- senha
+- ativo
+
+**Métodos principais:**
+- autenticar()
+- logout()
+- atualizarDados()
+
+---
+
+#### Estudante
+Representa o aluno que solicita o estágio.
+
+**Responsabilidades:**
+- Abrir solicitação
+- Submeter documentos
+- Consultar status
+- Visualizar pendências
+
+Relacionamento:
+Um estudante pode realizar várias solicitações de estágio.
+
+---
+
+#### Professor
+Representa o responsável pela avaliação dos relatórios de estágio.
+
+**Responsabilidades:**
+- Avaliar relatório
+- Emitir parecer
+- Atribuir conceito
+
+---
+
+#### Coordenador
+Responsável pela análise de exceções e decisões administrativas.
+
+**Responsabilidades:**
+- Visualizar painel
+- Analisar exceções
+- Registrar decisões
+
+---
+
+#### SolicitacaoEstagio
+Classe principal do sistema.
+
+**Responsabilidades:**
+- Registrar submissão
+- Atualizar status
+- Calcular score de conformidade
+- Listar pendências
+
+Relacionamentos:
+- Contém documentos
+- Gera pendências
+- Dispara notificações
+- Pode gerar análise de exceção
+- Pode incluir relatório de estágio
+
+---
+
+#### Documento
+Representa arquivos enviados no processo.
+
+**Responsabilidades:**
+- Validar formato
+- Armazenar documento
+- Atualizar status
+
+---
+
+#### ValidacaoAutomatica
+Executa verificações automáticas de conformidade.
+
+**Responsabilidades:**
+- Validar Lei do Estágio
+- Verificar regras institucionais
+- Gerar score
+- Detectar pendências
+
+---
+
+#### Pendencia
+Representa inconsistências detectadas no processo.
+
+#### Notificacao
+Responsável pelo envio de mensagens aos usuários.
+
+#### ModeloDocumento
+Armazena templates oficiais utilizados pelo sistema.
+
+#### Assinatura
+Representa assinaturas realizadas em documentos.
+
+#### RelatorioEstagio
+Especialização de documento destinada à avaliação acadêmica.
+
+#### AnaliseExcecao
+Representa situações analisadas pela coordenação.
+
+## Relacionamentos do Modelo
+
+- `Usuario` é superclasse de `Estudante`, `Professor` e `Coordenador`;
+- `Estudante` realiza `SolicitacaoEstagio`;
+- `SolicitacaoEstagio` contém `Documento`;
+- `SolicitacaoEstagio` gera `Pendencia`;
+- `SolicitacaoEstagio` dispara `Notificacao`;
+- `SolicitacaoEstagio` pode gerar `AnaliseExcecao`;
+- `Professor` avalia `RelatorioEstagio`;
+- `Coordenador` decide `AnaliseExcecao`;
+- `Documento` pode conter `Assinatura`;
+- `RelatorioEstagio` herda de `Documento`.
+
+## Objetivo do Diagrama
+
+O diagrama de classes foi desenvolvido para representar a estrutura do sistema de forma organizada, auxiliando na implementação orientada a objetos, compreensão das responsabilidades de cada entidade e manutenção do software.
+
 ## Descrição das Classes
 
 ### Usuario: Classe base responsável por representar os usuários do sistema. Armazena dados comuns de autenticação e identificação, como nome, e-mail institucional, senha e status de ativação.
