@@ -18,4 +18,4 @@ Repositório do Grupo VII de Projeto Back-End
 ## Preparar ambiente
 Na página inicial do repositório, clique no botão verde "CODE" e copie o URL que aparece na janela.
 
-Abra o seu VS Code e navegue até a pasta aonde ficará seu projeto. Abra o terminal Git Bash e copie "git clone" seguido do Link do repositório. Ao confirmar, o repositório será baixado no seu computador.
+Abra o seu VS Code e navegue até a pasta aonde ficará seu projeto. Abra o terminal Git Bash e copie `git clone` seguido do Link do repositório. Ao confirmar, o repositório será baixado no seu computador.
