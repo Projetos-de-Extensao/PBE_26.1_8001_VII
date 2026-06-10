@@ -205,17 +205,17 @@ Automatizar validações, reduzir retrabalho e direcionar casos complexos para a
 
 ---
 
-## 4. Acompanhamento e Governança
+### 4. Acompanhamento e Governança
 
 Responsável pela comunicação do andamento do processo.
 
-### Classes
+#### Classes
 
 | Classe        | Responsabilidade                                                                |
 | ------------- | ------------------------------------------------------------------------------- |
 | `Notificacao` | Envia alertas relacionados a status, pendências, prazos e documentos assinados. |
 
-### Objetivo do bloco
+#### Objetivo do bloco
 
 Garantir transparência e acompanhamento contínuo por parte dos envolvidos.
 
