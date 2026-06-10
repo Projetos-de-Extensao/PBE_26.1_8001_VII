@@ -167,7 +167,7 @@ Garantir o controle de acesso, identificação dos perfis e definição das resp
 
 ---
 
-### 2. Núcleo do Processo
+### 2. Base do Processo
 
 Representa as principais entidades operacionais do processo de validação do estágio.
 
