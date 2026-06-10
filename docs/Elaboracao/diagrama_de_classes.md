@@ -221,11 +221,11 @@ Garantir transparência e acompanhamento contínuo por parte dos envolvidos.
 
 ---
 
-## 5. Tipos e Estados do Sistema
+### 5. Tipos e Estados do Sistema
 
 Enums utilizados para padronizar regras e estados do sistema.
 
-### Classes Enumeradas (Enums)
+#### Classes Enumeradas (Enums)
 
 | Enum                 | Finalidade                                      |
 | -------------------- | ----------------------------------------------- |
@@ -236,7 +236,7 @@ Enums utilizados para padronizar regras e estados do sistema.
 | `TipoPendencia`      | Categoriza inconsistências encontradas.         |
 | `DecisaoCoordenacao` | Representa decisões tomadas pelo coordenador.   |
 
-### Objetivo do bloco
+#### Objetivo do bloco
 
 Padronizar regras de negócio e reduzir inconsistências no sistema.
 
