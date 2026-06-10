@@ -147,7 +147,7 @@ O diagrama de classes do Sistema de Validação de Estágios representa a estrut
 
 ## Visão Geral das Classes 
 
-### 1. Identidade e Atores
+### 1. Atores
 
 Responsável por representar os usuários do sistema e os atores envolvidos no processo de estágio.
 
