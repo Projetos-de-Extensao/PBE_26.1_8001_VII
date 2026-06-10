@@ -205,7 +205,7 @@ Automatizar validações, reduzir retrabalho e direcionar casos complexos para a
 
 ---
 
-### 4. Acompanhamento
+### 4. Monitoramento e controle
 
 Responsável pela comunicação do andamento do processo.
 
