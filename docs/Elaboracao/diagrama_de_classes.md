@@ -145,6 +145,123 @@ Notificacao "0..*" --> "1" Usuario : destinatário
 
 O diagrama de classes do Sistema de Validação de Estágios representa a estrutura estática do sistema, descrevendo as entidades, seus atributos, métodos e relacionamentos. O modelo foi desenvolvido para apoiar o gerenciamento do processo de estágio, incluindo submissão de documentos, validação automática, análise de pendências e acompanhamento do status da solicitação.
 
+## Visão Geral das Classes 
+
+### 1. Identidade e Atores
+
+Responsável por representar os usuários do sistema e os atores envolvidos no processo de estágio.
+
+#### Classes
+
+| Classe            | Responsabilidade                                                                  |
+| ----------------- | --------------------------------------------------------------------------------- |
+| `Usuario`         | Classe base do sistema com informações comuns de autenticação e identificação.    |
+| `Estudante`       | Usuário responsável por abrir e acompanhar solicitações de estágio.               |
+| `Professor`       | Responsável pela avaliação dos relatórios de estágio.                             |
+| `Coordenador`     | Responsável pela tomada de decisão em análises de exceção.                        |
+| `EmpresaParceira` | Organização onde o estágio será realizado e responsável pelas assinaturas legais. |
+
+#### Objetivo do bloco
+
+Garantir o controle de acesso, identificação dos perfis e definição das responsabilidades no fluxo do estágio.
+
+---
+
+### 2. Núcleo do Processo
+
+Representa as principais entidades operacionais do processo de validação do estágio.
+
+### Classes
+
+| Classe               | Responsabilidade                                                                |
+| -------------------- | ------------------------------------------------------------------------------- |
+| `SolicitacaoEstagio` | Classe central do sistema. Controla o ciclo de vida da solicitação de estágio.  |
+| `Documento`          | Representa os arquivos enviados durante o processo.                             |
+| `ModeloDocumento`    | Define os padrões exigidos para documentos institucionais.                      |
+| `RelatorioEstagio`   | Especialização de documento utilizada para acompanhamento acadêmico do estágio. |
+| `Assinatura`         | Gerencia as assinaturas eletrônicas ou validações formais dos documentos.       |
+
+### Objetivo do bloco
+
+Executar o fluxo principal do estágio, desde a abertura da solicitação até a entrega da documentação obrigatória.
+
+---
+
+## 3. Validação e Conformidade
+
+Responsável pela automação das verificações legais, acadêmicas e institucionais.
+
+### Classes
+
+| Classe                | Responsabilidade                                                 |
+| --------------------- | ---------------------------------------------------------------- |
+| `ValidacaoAutomatica` | Processa automaticamente os documentos e regras de conformidade. |
+| `Pendencia`           | Registra inconsistências encontradas durante validações.         |
+| `AnaliseExcecao`      | Trata casos fora das regras padrão do processo.                  |
+
+### Objetivo do bloco
+
+Automatizar validações, reduzir retrabalho e direcionar casos complexos para análise humana.
+
+---
+
+## 4. Acompanhamento e Governança
+
+Responsável pela comunicação do andamento do processo.
+
+### Classes
+
+| Classe        | Responsabilidade                                                                |
+| ------------- | ------------------------------------------------------------------------------- |
+| `Notificacao` | Envia alertas relacionados a status, pendências, prazos e documentos assinados. |
+
+### Objetivo do bloco
+
+Garantir transparência e acompanhamento contínuo por parte dos envolvidos.
+
+---
+
+## 5. Tipos e Estados do Sistema
+
+Enums utilizados para padronizar regras e estados do sistema.
+
+### Classes Enumeradas (Enums)
+
+| Enum                 | Finalidade                                      |
+| -------------------- | ----------------------------------------------- |
+| `StatusSolicitacao`  | Define o estado da solicitação de estágio.      |
+| `TipoDocumento`      | Categoriza os documentos enviados.              |
+| `StatusDocumento`    | Representa o estágio de validação do documento. |
+| `TipoNotificacao`    | Define categorias de mensagens enviadas.        |
+| `TipoPendencia`      | Categoriza inconsistências encontradas.         |
+| `DecisaoCoordenacao` | Representa decisões tomadas pelo coordenador.   |
+
+### Objetivo do bloco
+
+Padronizar regras de negócio e reduzir inconsistências no sistema.
+
+---
+
+## Arquitetura Geral do Sistema
+
+O sistema possui como entidade principal a classe:
+
+### `SolicitacaoEstagio`
+
+Ela centraliza todo o processo e se relaciona com:
+
+* `Estudante` → realiza a solicitação;
+* `Documento` → compõe a solicitação;
+* `Pendencia` → inconsistências encontradas;
+* `Notificacao` → comunicação do andamento;
+* `AnaliseExcecao` → tratamento de situações especiais;
+* `RelatorioEstagio` → acompanhamento acadêmico;
+* `ValidacaoAutomatica` → execução das verificações.
+
+Essa estrutura organiza o sistema em módulos bem definidos, facilitando manutenção, escalabilidade e separação de responsabilidades.
+
+
+
 ## Estrutura do Sistema
 
 O sistema possui três tipos principais de usuários: estudante, professor e coordenador, todos derivados da classe `Usuario`. O estudante é responsável pela abertura da solicitação de estágio e envio de documentos, o professor realiza a avaliação dos relatórios e o coordenador conduz análises de exceção e decisões administrativas.
