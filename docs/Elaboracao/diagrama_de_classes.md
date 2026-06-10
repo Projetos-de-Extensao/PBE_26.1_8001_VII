@@ -171,7 +171,7 @@ Garantir o controle de acesso, identificação dos perfis e definição das resp
 
 Representa as principais entidades operacionais do processo de validação do estágio.
 
-### Classes
+#### Classes
 
 | Classe               | Responsabilidade                                                                |
 | -------------------- | ------------------------------------------------------------------------------- |
@@ -181,17 +181,17 @@ Representa as principais entidades operacionais do processo de validação do es
 | `RelatorioEstagio`   | Especialização de documento utilizada para acompanhamento acadêmico do estágio. |
 | `Assinatura`         | Gerencia as assinaturas eletrônicas ou validações formais dos documentos.       |
 
-### Objetivo do bloco
+#### Objetivo do bloco
 
 Executar o fluxo principal do estágio, desde a abertura da solicitação até a entrega da documentação obrigatória.
 
 ---
 
-## 3. Validação e Conformidade
+### 3. Validação e Conformidade
 
 Responsável pela automação das verificações legais, acadêmicas e institucionais.
 
-### Classes
+#### Classes
 
 | Classe                | Responsabilidade                                                 |
 | --------------------- | ---------------------------------------------------------------- |
@@ -199,7 +199,7 @@ Responsável pela automação das verificações legais, acadêmicas e instituci
 | `Pendencia`           | Registra inconsistências encontradas durante validações.         |
 | `AnaliseExcecao`      | Trata casos fora das regras padrão do processo.                  |
 
-### Objetivo do bloco
+#### Objetivo do bloco
 
 Automatizar validações, reduzir retrabalho e direcionar casos complexos para análise humana.
 
