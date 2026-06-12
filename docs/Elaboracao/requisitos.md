@@ -21,8 +21,6 @@ title: Levantamento de Requisitos
 
 | ID   | Descrição                                                                    | Prioridade |
 | ---- | ------------------------------------------------------------------------------ | ---------- |
-| RF01 | O sistema deve validar automaticamente os dados submetidos com base nas regras da Lei 11.788/2008 e regulamentos institucionais, indicando inconsistências | Alta |
-| RF02 | O sistema deve calcular e exibir um índice de conformidade para cada solicitação, com base nas validações realizadas. | Alta |
 | RF03 | O sistema deve identificar automaticamente pendências e retornar ao aluno as correções necessárias, sem intervenção manual. | Alta |
 | RF04 | O sistema deve permitir ao aluno submeter documentos obrigatórios de estágio (contrato, termo de compromisso e relatórios) por meio de uma interface estruturada. | Alta |
 | RF05 | O sistema deve enviar notificações automáticas ao aluno sobre mudanças de status, pendências e prazos relacionados ao estágio. | Média |
