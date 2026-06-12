@@ -33,16 +33,13 @@ usecase (Preencher Dados Complementares) as UC02_3
 usecase (Validar Formato do Arquivo) as UC02_4
 usecase (Arquivo Inválido) as FA01
 
-usecase (UC03: Validar Documentos Automaticamente) as UC03
 usecase (Validar Regras Legais) as UC03_1
 usecase (Validar Regras Institucionais) as UC03_2
-usecase (Gerar Score de Conformidade) as UC03_3
 usecase (Erro de Validação) as FA02
 
 usecase (UC04: Identificar Pendências) as UC04
 usecase (Gerar Lista de Inconsistências) as UC04_1
 usecase (Associar Pendências aos Documentos) as UC04_2
-usecase (Retornar Correções ao Aluno) as UC04_3
 
 usecase (UC05: Consultar Status da Solicitação) as UC05
 usecase (Visualizar Histórico) as UC05_1
