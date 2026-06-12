@@ -44,7 +44,6 @@ mindmapDiagram {
 
 ** Objetivo <<entrega>>
 *** Tornar mais fácil a validação de Estágio
-*** introduzir automação por IA
 
 ** Brainstorm (Processo) <<pesquisa>>
 *** Cadastrar Cliente
@@ -56,7 +55,6 @@ mindmapDiagram {
 ****_ Estágio é aprovado ou não, indicando pendências
 
 ** Vantagens <<5w2h>>
-***_ Garantia de conformidade com normas
 ***_ Acompanhamento em tempo real
 ***_ Rapidez e eficiência, além de segurança
 
