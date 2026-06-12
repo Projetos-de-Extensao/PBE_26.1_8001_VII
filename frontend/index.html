@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Estágios</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-mortarboard-fill me-2"></i>Sistema de Estágios
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button class="nav-link btn-view active" data-view="aluno" onclick="switchView('aluno')">
+              <i class="bi bi-person-fill me-1"></i>Aluno
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-view" data-view="coordenador" onclick="switchView('coordenador')">
+              <i class="bi bi-person-check-fill me-1"></i>Coordenador
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-view" data-view="professor" onclick="switchView('professor')">
+              <i class="bi bi-person-video3 me-1"></i>Professor
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay d-none">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Carregando...</span>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+    <div id="toastMessage" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-info-circle-fill me-2" id="toastIcon"></i>
+        <strong class="me-auto" id="toastTitle">Notificação</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toastBody"></div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+
+    <!-- ==================== VIEW ALUNO ==================== -->
+    <div id="view-aluno" class="view-section">
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-success text-white">
+              <h5 class="mb-0"><i class="bi bi-send-plus me-2"></i>Nova Solicitação de Estágio</h5>
+            </div>
+            <div class="card-body">
+              <form id="formSolicitacao" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="empresaSelect" class="form-label">Empresa <span class="text-danger">*</span></label>
+                  <select class="form-select" id="empresaSelect" required>
+                    <option value="">Selecione uma empresa...</option>
+                  </select>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4 mb-3">
+                    <label for="uploadContrato" class="form-label">Contrato de Estágio (PDF) <span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" id="uploadContrato" accept=".pdf" required>
+                    <div class="form-text">Formato PDF obrigatório.</div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="uploadTermo" class="form-label">Termo de Compromisso (PDF) <span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" id="uploadTermo" accept=".pdf" required>
+                    <div class="form-text">Formato PDF obrigatório.</div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="uploadApolice" class="form-label">Apólice de Seguro (PDF) <span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" id="uploadApolice" accept=".pdf" required>
+                    <div class="form-text">Formato PDF obrigatório.</div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success" id="btnEnviarSolicitacao">
+                  <i class="bi bi-cloud-arrow-up me-1"></i> Enviar Solicitação
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resultado da Validação -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0"><i class="bi bi-robot me-2"></i>Resultado da Validação</h5>
+            </div>
+            <div class="card-body">
+              <div id="resultadoValidacao" class="text-muted text-center py-4">
+                <i class="bi bi-inbox" style="font-size: 2rem;"></i>
+                <p class="mt-2 mb-0">Nenhuma solicitação enviada ainda.</p>
+                <small>Após enviar, o resultado do robô aparecerá aqui.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Relatório de Estágio -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i>Enviar Relatório de Estágio</h5>
+            </div>
+            <div class="card-body">
+              <form id="formRelatorio">
+                <div class="mb-3">
+                  <label for="relTitulo" class="form-label">Título <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="relTitulo" placeholder="Ex: Relatório Parcial - Empresa X" required>
+                </div>
+                <div class="mb-3">
+                  <label for="relDescricao" class="form-label">Descrição <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="relDescricao" rows="4" placeholder="Descreva as atividades realizadas no estágio..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning" id="btnEnviarRelatorio">
+                  <i class="bi bi-send me-1"></i> Enviar Relatório
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== VIEW COORDENADOR ==================== -->
+    <div id="view-coordenador" class="view-section d-none">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0"><i class="bi bi-list-check me-2"></i>Todas as Solicitações</h5>
+          <button class="btn btn-light btn-sm" onclick="carregarSolicitacoes()">
+            <i class="bi bi-arrow-clockwise me-1"></i>Atualizar
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle" id="tabelaSolicitacoes">
+              <thead class="table-primary">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Empresa</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Score</th>
+                  <th scope="col">Criado em</th>
+                  <th scope="col" class="text-center">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tbodySolicitacoes">
+                <tr id="loadingSolicitacoes">
+                  <td colspan="6" class="text-center text-muted py-4">
+                    <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                    Carregando solicitações...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== VIEW PROFESSOR ==================== -->
+    <div id="view-professor" class="view-section d-none">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0"><i class="bi bi-journal-text me-2"></i>Relatórios dos Alunos</h5>
+          <button class="btn btn-light btn-sm" onclick="carregarRelatorios()">
+            <i class="bi bi-arrow-clockwise me-1"></i>Atualizar
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle" id="tabelaRelatorios">
+              <thead class="table-secondary">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Título</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Solicitação</th>
+                  <th scope="col" class="text-center">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyRelatorios">
+                <tr id="loadingRelatorios">
+                  <td colspan="6" class="text-center text-muted py-4">
+                    <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                    Carregando relatórios...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Ver Detalhes do Relatório -->
+  <div class="modal fade" id="modalDetalhesRelatorio" tabindex="-1" aria-labelledby="modalDetalhesRelatorioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-secondary text-white">
+          <h5 class="modal-title" id="modalDetalhesRelatorioLabel">
+            <i class="bi bi-journal-text me-2"></i>Detalhes do Relatório
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body" id="modalDetalhesBody">
+          <div class="text-center py-4">
+            <div class="spinner-border text-secondary" role="status">
+              <span class="visually-hidden">Carregando...</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-lg me-1"></i>Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+replace
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
