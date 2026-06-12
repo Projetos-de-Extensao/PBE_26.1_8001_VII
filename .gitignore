@@ -49,3 +49,10 @@ node_modules/
 # Configurações do Django Local
 __pycache__/
 *.sqlite3
+
+# Banco de dados local
+*.sqlite3
+
+# Cache do Python
+__pycache__/
+*.pyc
