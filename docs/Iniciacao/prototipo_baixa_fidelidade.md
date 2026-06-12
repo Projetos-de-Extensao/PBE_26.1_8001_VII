@@ -46,42 +46,6 @@ O desenvolvimento dos protótipos de baixa fidelidade teve início com a coleta 
 @endsalt
 ```
 
-###  Validação Automática
-
-```plantuml
-@startsalt
-{+
-  **Validação de Documentos**
-  Status:
-  "Iniciando validação...               "
-  
-  Regras Legais:
-  "Aplicando Lei 11.788/2008            "
-  
-  Regras Institucionais:
-  "Validando critérios internos         "
-  
-  Análise:
-  "Identificando inconsistências        "
-  
-  Score de Conformidade:
-  "Calculando...                        "
-  --
-  [  Processar  ] | [  Atualizar  ]
-  --
-  **Mensagem:**
-  <color:red>!! Falha na leitura -> documento inválido</color>
-  
-  **Resultado:**
-  "Validação registrada                 "
-  
-  **Regras:**
-  * Tempo máximo: 15 segundos
-  * Score baseado na conformidade
-}
-@endsalt
-```
-
 ### Identificar Pendências
 
 ```plantuml
@@ -168,43 +132,6 @@ O desenvolvimento dos protótipos de baixa fidelidade teve início com a coleta 
   --
   **Regras de Negócio:**
   * Histórico deve ser imutável
-}
-@endsalt
-```
-
-###  Painel Gerencial
-
-```plantuml
-@startsalt
-{+
-  **Painel Gerencial (Coordenação)**
-  --
-  **Ator:** | Coordenação
-  **Objetivo:** | Monitorar o desempenho geral do sistema
-  **Pré-requisito:** | Coordenador autenticado
-  --
-  **Interface de Monitoramento:**
-  {
-    Filtros: | ^Período: Últimos 30 dias^ | ^Status: Todos^ | [ Aplicar Filtros ]
-  }
-  ---
-  **Indicadores de Desempenho:**
-  {
-    Taxa de Aprovação: | [==== 88% ====]
-    Tempo Médio:       | "12.5 segundos"
-    Solicitações:      | "1.240 processadas"
-  }
-  --
-  **Fluxo Principal:**
-  1. O coordenador acessa o painel
-  2. O sistema exibe indicadores de desempenho
-  3. O coordenador aplica filtros
-  4. O sistema atualiza os indicadores em tempo real
-  --
-  **Pós-requisito:** | Visão consolidada disponível
-  --
-  **Regras de Negócio:**
-  * Dados devem ser atualizados em tempo real
 }
 @endsalt
 ```
